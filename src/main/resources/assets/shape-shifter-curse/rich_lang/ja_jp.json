@@ -2,7 +2,7 @@
   "advancements.shape-shifter-curse.on_enable_mod.title": ["未知の一章"],
   "advancements.shape-shifter-curse.on_enable_mod.description": ["いったい何があった？"],
   "advancements.shape-shifter-curse.on_open_book_of_shape_shifter.title": ["いまは読む時間"],
-  "advancements.shape-shifter-curse.on_open_book_of_shape_shifter.description": ["ケモの本を開ける"],
+  "advancements.shape-shifter-curse.on_open_book_of_shape_shifter.description": ["ケモの本を開く"],
   "advancements.shape-shifter-curse.on_end_cursed_moon.title": ["見覚えがある展開"],
   "advancements.shape-shifter-curse.on_end_cursed_moon.description": ["永続効果じゃない？よかった…"],
   "advancements.shape-shifter-curse.on_end_cursed_moon_cured.title": ["魔力の調合"],
@@ -148,28 +148,32 @@
   "block.shape-shifter-curse.moondust_crystal_grit": ["月の粉の結晶砂利"],
   "screen.shape-shifter-curse.book_of_shape_shifter.start_content_text":
   [
-    "当你试图翻开这本书时，你感觉到伴随着一阵微弱的刺痛，从书中溢出的奇特魔法从指尖流进了你的身体，让你如同触电一般将手缩了回去\n",
-  "这可能是某种",{
-    "text": "诅咒",
+    "この本を開いて読んでみた瞬間、かすかな痛みを伴って、本の中にあふれる奇妙な魔法が指先から体へと流れるのを感じて、感電したようにパッと手をひっこめた\n",
+  "これは何か",{
+    "text": "呪い",
     "color": "#0096FF"
-  }, "么？你不知道\n",
-  "不过你可以确信的是继续打开这本书会导致一些", {
-    "text": "未知的后果\n\n",
+  }, "でしょうか？知らない\n",
+  "だが、確かなのは、開き続ければ", {
+    "text": "今はまだ知り得ないこと",
     "color": "#0096FF"
-  },
+  },"が起きるということだ\n\n",
     {
-      "text": "注意：\n这会开启幻形者诅咒的模组内容\n这并不算是一个适合所有人的模组，在继续前，请确保你了解其主题与玩法",
+      "text": "※ご注意してください：\nこれにより、「ケモののろい(\"Shape Shifter Curse\")」のMODコンテンツが解放されます\nこれは万人向けのモッドではありませんので、進める前に、必ずそのテーマとプレイスタイルを把握しておいてください\n\n",
+      "color": "#ed721d"
+    },
+    {
+      "text": "※訳者注：\n訳者は日本語が母国語ではなく、習熟度も高くないため、不自然な表現があるかもしれません、予めご了承ください\n日本語の修正や改善案は大歓迎です、お気づきの点があれば、ぜひ教えてください",
       "color": "#ed721d"
     }
   ],
-  "screen.shape-shifter-curse.book_of_shape_shifter.start_button_text": ["翻开幻形者之书"],
-  "info.shape-shifter-curse.on_enable_mod": ["随着书页的开启，书中封印的强大魔法涌入了你的身体！"],
-  "info.shape-shifter-curse.on_enable_mod_after": ["回过神时，你发现自己...似乎没什么变化？\n也许你应该检查一下书中的内容.."],
-  "info.shape-shifter-curse.before_cursed_moon": ["你感觉到体内的魔法正在涌动，下一个夜晚，诅咒之月将会升起..."],
-  "info.shape-shifter-curse.before_cursed_moon_nether": ["你感觉到体内的魔法正在涌动，一段时间后，诅咒之月将会在某处升起————似乎即使在其它位面，你依然无法远离它"],
-  "info.shape-shifter-curse.cursed_moon_forced": ["你感觉到奇怪的力量在推动时间，下一个夜晚，诅咒之月将会升起..."],
-  "info.shape-shifter-curse.on_cursed_moon": ["你体内的魔法开始激荡，诅咒之月升起了"],
-  "info.shape-shifter-curse.on_cursed_moon_nether": ["你体内的魔法开始激荡，诅咒之月在某处升起了"],
+  "screen.shape-shifter-curse.book_of_shape_shifter.start_button_text": ["ケモの本を開く"],
+  "info.shape-shifter-curse.on_enable_mod": ["ページを開くとともに、本の中に封印された強力な魔法が体へと押し寄せてきた！"],
+  "info.shape-shifter-curse.on_enable_mod_after": ["我に返ったとき、自分には……何の変哲もない？と気づいた\n本の内容を調べる必要があるかもしれない…"],
+  "info.shape-shifter-curse.before_cursed_moon": ["体内の魔法が沸き返るのを感じる、次の夜には、呪いの月が昇るのだ…"],
+  "info.shape-shifter-curse.before_cursed_moon_nether": ["体内の魔法が沸き返るのを感じる、次の夜には、呪いの月が昇る————他の次元においても、逃げる術はないとみえる"],
+  "info.shape-shifter-curse.cursed_moon_forced": ["妙な力が時間を推し進めているように感じる、次の夜には、呪いの月が昇るのだ…"],
+  "info.shape-shifter-curse.on_cursed_moon": ["体内の魔法が激しさを増していく、呪いの月は昇り始めていたのだ"],
+  "info.shape-shifter-curse.on_cursed_moon_nether": ["体内の魔法が激しさを増していく、呪いの月はあるべき場所に昇り始めていたのだ"],
   "info.shape-shifter-curse.on_cursed_moon_special": ["奇怪的是，它似乎没有对你的身体产生可见的影响..也许你当前的形态比较[特殊]？"],
   "info.shape-shifter-curse.on_cursed_moon_permanent": ["然而，它也已经无法对你永久改变的形态造成任何影响了"],
   "info.shape-shifter-curse.on_cursed_moon_before_enable": ["今夜的月亮看起来有些奇怪。不知道是不是由于它的影响，怪物们开始动荡不安"],
