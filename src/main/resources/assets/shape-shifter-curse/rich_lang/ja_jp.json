@@ -1,10 +1,10 @@
 {
   "advancements.shape-shifter-curse.on_enable_mod.title": ["未知の一章"],
-  "advancements.shape-shifter-curse.on_enable_mod.description": ["いったい何があった？"],
+  "advancements.shape-shifter-curse.on_enable_mod.description": ["いったい何があった?"],
   "advancements.shape-shifter-curse.on_open_book_of_shape_shifter.title": ["いまは読む時間"],
   "advancements.shape-shifter-curse.on_open_book_of_shape_shifter.description": ["ケモの本を開く"],
   "advancements.shape-shifter-curse.on_end_cursed_moon.title": ["見覚えがある展開"],
-  "advancements.shape-shifter-curse.on_end_cursed_moon.description": ["永続効果じゃない？よかった…"],
+  "advancements.shape-shifter-curse.on_end_cursed_moon.description": ["永続効果じゃない?よかった…"],
   "advancements.shape-shifter-curse.on_end_cursed_moon_cured.title": ["魔力の調合"],
   "advancements.shape-shifter-curse.on_end_cursed_moon_cured.description": ["ボクの理論は…黄金の魔力には強い安定性がある"],
   "advancements.shape-shifter-curse.on_end_cursed_moon_cured_form_2.title": ["別な方法で"],
@@ -13,14 +13,14 @@
   "advancements.shape-shifter-curse.on_end_cursed_moon_bugged_form_2.description": ["♪バグなんかじゃねぇよ♪\n♪うるせぇよ♪\n♪黙れよ♪\n♪バグなんかじゃねぇよ♪\n♪フィーチャーこそが正義♪\n♪バグなんか♪\n♪じゃねぇよ♪\n♪正しいのは俺♪\nその呪い、呪い、その呪い、その呪い、呪い、その呪い......"],
   "advancements.shape-shifter-curse.on_get_transform_effect.title": ["あの生物はちょっと違いがある！"],
   "advancements.shape-shifter-curse.on_get_transform_effect.description": ["呪文をまき散らす生物に近づきに試して、その与えられる効果を得る"],
-  "advancements.shape-shifter-curse.on_sleep_when_have_transform_effect.title": ["眠りたい？"],
-  "advancements.shape-shifter-curse.on_sleep_when_have_transform_effect.description": ["呪文の効果がまだ有効ですけどね、ちょっとくらい寝ても大丈夫でしょう？"],
+  "advancements.shape-shifter-curse.on_sleep_when_have_transform_effect.title": ["眠りたい?"],
+  "advancements.shape-shifter-curse.on_sleep_when_have_transform_effect.description": ["呪文の効果がまだ有効ですけどね、ちょっとくらい寝ても大丈夫でしょう?"],
   "advancements.shape-shifter-curse.on_transform_0.title": ["あっ…やべぇ"],
   "advancements.shape-shifter-curse.on_transform_0.description": ["「ちょっとくらい寝ても大丈夫」という言葉が、見事に崩れ去った……\nこれは体内の魔力が引き起こした効果…"],
   "advancements.shape-shifter-curse.on_transform_1.title": ["これはまだ序の口"],
   "advancements.shape-shifter-curse.on_transform_1.description": ["まだこの程度で止まらないよ"],
   "advancements.shape-shifter-curse.on_transform_2.title": ["返品不可"],
-  "advancements.shape-shifter-curse.on_transform_2.description": ["今や、この体はすっかり変わっちゃって、もう戻り方はないん……でしょうか？"],
+  "advancements.shape-shifter-curse.on_transform_2.description": ["今や、この体はすっかり変わっちゃって、もう戻り方はないん……でしょうか?"],
   "advancements.shape-shifter-curse.on_transform_by_catalyst.title": ["活性化"],
   "advancements.shape-shifter-curse.on_transform_by_catalyst.description": ["呪文効果の持続中に促進剤を使う"],
   "advancements.shape-shifter-curse.on_transform_by_cure.title": ["抑制剤"],
@@ -60,20 +60,20 @@
     "item.minecraft.lingering_potion.effect.to_ocelot_0_potion": ["ヤマネコの呪文の残留ポーション"],
   "item.minecraft.tipped_arrow.effect.to_ocelot_0_potion": ["ヤマネコの呪文の矢"],
   "effect.shape-shifter-curse.to_ocelot_0_potion": ["生肉、うまいね！もっともっと食べたい！"],
-  "item.minecraft.potion.effect.to_feral_cat_sp_potion": ["ヨツケモのネコの呪文のポーション"],
-    "item.minecraft.splash_potion.effect.to_feral_cat_sp_potion": ["ヨツケモのネコの呪文のスプラッシュポーション"],
-    "item.minecraft.lingering_potion.effect.to_feral_cat_sp_potion": ["ヨツケモのネコの呪文の残留ポーション"],
-  "item.minecraft.tipped_arrow.effect.to_feral_cat_sp_potion": ["ヨツケモのネコの呪文の矢"],
-  "effect.shape-shifter-curse.to_feral_cat_sp_potion": ["ニャー？"],
-  "item.minecraft.potion.effect.to_familiar_fox_0_potion": ["キツネの使い魔の呪文のポーション"],
-  "item.minecraft.splash_potion.effect.to_familiar_fox_0_potion": ["キツネの使い魔の呪文のスプラッシュポーション"],
-  "item.minecraft.lingering_potion.effect.to_familiar_fox_0_potion": ["キツネの使い魔の呪文の残留ポーション"],
-  "item.minecraft.tipped_arrow.effect.to_familiar_fox_0_potion": ["キツネの使い魔の呪文の矢"],
+  "item.minecraft.potion.effect.to_feral_cat_sp_potion": ["ヨツケモネコの呪文のポーション"],
+    "item.minecraft.splash_potion.effect.to_feral_cat_sp_potion": ["ヨツケモネコの呪文のスプラッシュポーション"],
+    "item.minecraft.lingering_potion.effect.to_feral_cat_sp_potion": ["ヨツケモネコの呪文の残留ポーション"],
+  "item.minecraft.tipped_arrow.effect.to_feral_cat_sp_potion": ["ヨツケモネコの呪文の矢"],
+  "effect.shape-shifter-curse.to_feral_cat_sp_potion": ["ニャー?"],
+  "item.minecraft.potion.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文のポーション"],
+  "item.minecraft.splash_potion.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文のスプラッシュポーション"],
+  "item.minecraft.lingering_potion.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文の残留ポーション"],
+  "item.minecraft.tipped_arrow.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文の矢"],
   "effect.shape-shifter-curse.to_familiar_fox_0_potion": ["その中に秘められた魔力は既に改竄されている、金塊で浄化できるかもしれない"],
-  "item.minecraft.potion.effect.to_snow_fox_0_potion": ["雪のキツネの呪文のポーション"],
-  "item.minecraft.splash_potion.effect.to_snow_fox_0_potion": ["雪のキツネの呪文のスプラッシュポーション"],
-  "item.minecraft.lingering_potion.effect.to_snow_fox_0_potion": ["雪のキツネの呪文の残留ポーション"],
-  "item.minecraft.tipped_arrow.effect.to_snow_fox_0_potion": ["雪のキツネの呪文の矢"],
+  "item.minecraft.potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文のポーション"],
+  "item.minecraft.splash_potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文のスプラッシュポーション"],
+  "item.minecraft.lingering_potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文の残留ポーション"],
+  "item.minecraft.tipped_arrow.effect.to_snow_fox_0_potion": ["雪キツネの呪文の矢"],
   "effect.shape-shifter-curse.to_snow_fox_0_potion": ["浄化した後、手触りはちょっと冷たいです"],
   "item.minecraft.potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文のポーション"],
   "item.minecraft.splash_potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文のスプラッシュポーション"],
@@ -87,7 +87,7 @@
   "item.minecraft.tipped_arrow.effect.feed_potion": ["圧縮エネルギーの矢"],
   "effect.shape-shifter-curse.feed_effect": ["密度の高いエネルギーはポーション瓶の中に渦巻いている、満腹度を回復できる"],
 
-  "item.shape-shifter-curse.cursed_book_of_shape_shifter": ["おかしい本"],
+  "item.shape-shifter-curse.cursed_book_of_shape_shifter": ["変な本"],
   "item.shape-shifter-curse.book_of_shape_shifter": ["ケモの本"],
   "item.shape-shifter-curse.book_of_shape_shifter.tooltip": ["'この本の秘密を読めるのは、「呪われている」者のみ'"],
   "item.shape-shifter-curse.untreated_moondust": ["加工なしの月の粉"],
@@ -97,7 +97,7 @@
   "item.shape-shifter-curse.catalyst": ["促進剤"],
   "item.shape-shifter-curse.catalyst.tooltip": ["触れた瞬間、体内の魔力が反応を示す"],
   "item.shape-shifter-curse.powerful_catalyst": ["共鳴の促進剤"],
-  "item.shape-shifter-curse.powerful_catalyst.tooltip": ["変化をさらに推し進め、それを恒久的なものとできるかもしれない…本当に、覚悟はできているのかい？"],
+  "item.shape-shifter-curse.powerful_catalyst.tooltip": ["変化をさらに推し進め、それを恒久的なものとできるかもしれない…本当に、覚悟はできているのかい?"],
   "item.shape-shifter-curse.inhibitor": ["抑制剤"],
   "item.shape-shifter-curse.inhibitor.tooltip": ["触れた瞬間、体内の魔力がなんか静かになる"],
   "item.shape-shifter-curse.powerful_inhibitor": ["強力な抑制剤"],
@@ -115,7 +115,7 @@
   "item.shape-shifter-curse.netherite_morphscale_anklet": ["ネザライト製・可塑のアンクレット"],
   "item.shape-shifter-curse.morphscale_armor.tooltip": ["これらの防具に織り込まれた月の粉の魔力が、装備者の形態に呼応して自動的に最適化される。"],
   "item.shape-shifter-curse.amulet_bracelet": ["お守りアンクレット"],
-  "item.shape-shifter-curse.amulet_bracelet.tooltip": ["[キツネの使い魔形態専用] ウィッチとエヴォーカーの影響、および敵対的モブから魔力を吸収する時の負の効果を無効化"],
+  "item.shape-shifter-curse.amulet_bracelet.tooltip": ["[キツネ使い魔形態専用] ウィッチとエヴォーカーの影響、および敵対的モブから魔力を吸収する時の負の効果を無効化"],
   "item.shape-shifter-curse.attach_hook": ["くっつきフック"],
   "item.shape-shifter-curse.attach_hook.tooltip": ["[コウモリ形態専用]武器や道具が、手から滑らなくなる、代わりにその耐久度の消耗が激しくなる"],
   "item.shape-shifter-curse.charm_of_hollow_fang": ["からっぽキバの首輪"],
@@ -125,11 +125,11 @@
   "item.shape-shifter-curse.diamond_mining_claw": ["ダイヤのツメ"],
   "item.shape-shifter-curse.diamond_mining_claw.tooltip": ["[コウモリ形態専用道具]使うには強力な前爪が必要です。採掘効率と攻撃ダメージを増加し、装備中でも壁に張り付く"],
   "item.shape-shifter-curse.charm_of_reverse_thermometer": ["「イケドンオ」のお守り"],
-  "item.shape-shifter-curse.charm_of_reverse_thermometer.tooltip": ["[雪のキツネ形態専用]冷たいや暑いバイオームに対する体力最大値の影響をあべこべに反転させる"],
+  "item.shape-shifter-curse.charm_of_reverse_thermometer.tooltip": ["[雪キツネ形態専用]冷たいや暑いバイオームに対する体力最大値の影響をあべこべに反転させる"],
   "item.shape-shifter-curse.bottled_snowfall": ["ボトル入り吹雪"],
-  "item.shape-shifter-curse.bottled_snowfall.tooltip": ["[雪のキツネ形態専用道具]効果を発揮するには強力な氷の魔力が必要です。少量の満腹度を代償に、雪玉を生成して発射する"],
+  "item.shape-shifter-curse.bottled_snowfall.tooltip": ["[雪キツネ形態専用道具]効果を発揮するには強力な氷の魔力が必要です。少量の満腹度を代償に、雪玉を生成して発射する"],
   "item.shape-shifter-curse.frost_pawglove": ["霜降りのツメ"],
-  "item.shape-shifter-curse.frost_pawglove.tooltip": ["[雪のキツネ形態専用]効果を発揮するには強力な氷の魔力が必要です。雪玉の着弾範囲内に移動速度低下の効果を与えるが、その代償としてダメージが減少する"],
+  "item.shape-shifter-curse.frost_pawglove.tooltip": ["[雪キツネ形態専用]効果を発揮するには強力な氷の魔力が必要です。雪玉の着弾範囲内に移動速度低下の効果を与えるが、その代償としてダメージが減少する"],
   "item.shape-shifter-curse.collar_of_tension": ["アドレナチョーカー"],
   "item.shape-shifter-curse.collar_of_tension.tooltip": ["[ヤマネコ形態専用]本物のハンターにこそ相応しい。ツメ攻撃と飛びかかる攻撃のダメージが上昇するが、その代償として飛び道具に対する自動回避が発動しなくなる"],
   "item.shape-shifter-curse.collar_of_whiskers": ["ねこひげチョーカー"],
@@ -152,7 +152,7 @@
   "これは何か",{
     "text": "呪い",
     "color": "#0096FF"
-  }, "でしょうか？知らない\n",
+  }, "でしょうか?知らない\n",
   "だが、確かなのは、開き続ければ", {
     "text": "今はまだ知り得ないこと",
     "color": "#0096FF"
@@ -168,7 +168,7 @@
   ],
   "screen.shape-shifter-curse.book_of_shape_shifter.start_button_text": ["ケモの本を開く"],
   "info.shape-shifter-curse.on_enable_mod": ["ページを開くとともに、本の中に封印された強力な魔力が体へと押し寄せてきた！"],
-  "info.shape-shifter-curse.on_enable_mod_after": ["我に返ったとき、自分には……何の変哲もない？と気づいた\n本の内容を調べる必要があるかもしれない…"],
+  "info.shape-shifter-curse.on_enable_mod_after": ["我に返ったとき、自分には……何の変哲もない?と気づいた\n本の内容を調べる必要があるかもしれない…"],
   "info.shape-shifter-curse.before_cursed_moon": ["体内の魔力が沸き返るのを感じる、次の夜には、呪いの月が昇るのだ…"],
   "info.shape-shifter-curse.before_cursed_moon_nether": ["体内の魔力が沸き返るのを感じる、次の夜には、呪いの月が昇る————他の次元においても、逃げる術はないとみえる"],
   "info.shape-shifter-curse.cursed_moon_forced": ["妙な力が時間を推し進めているように感じる、次の夜には、呪いの月が昇るのだ…"],
@@ -206,148 +206,148 @@
   "info.shape-shifter-curse.max_form_used_powerful_catalyst": ["共鳴の促進剤の影響下で、この形態は永久的な変化を遂げた…"],
   "info.shape-shifter-curse.form_used_powerful_catalyst_failed": ["この形態には共鳴の促進剤は効果がない"],
   "info.shape-shifter-curse.sp_form_used_catalyst": ["この形態の中に何か特殊の魔力が流れるようだ、促進剤ではこれ以上の影響を及ぼすことはできない…"],
-  "entity.shape-shifter-curse.t_bat": ["咒文蝙蝠"],
-  "item.shape-shifter-curse.custom_bat_spawn_egg": ["咒文蝙蝠刷怪蛋"],
-  "entity.shape-shifter-curse.t_axolotl": ["咒文美西螈"],
-  "item.shape-shifter-curse.custom_axolotl_spawn_egg": ["咒文美西螈刷怪蛋"],
-  "entity.shape-shifter-curse.t_ocelot": ["咒文豹猫"],
-  "item.shape-shifter-curse.custom_ocelot_spawn_egg": ["咒文豹猫刷怪蛋"],
-  "entity.shape-shifter-curse.t_wolf": ["咒文彷徨狼灵"],
-  "item.shape-shifter-curse.custom_wolf_spawn_egg": ["咒文彷徨狼灵刷怪蛋"],
-  "entity.shape-shifter-curse.anubis_wolf_minion": ["狼灵护卫"],
+  "entity.shape-shifter-curse.t_bat": ["呪文コウモリ"],
+  "item.shape-shifter-curse.custom_bat_spawn_egg": ["呪文コウモリのスポーンエッグ"],
+  "entity.shape-shifter-curse.t_axolotl": ["呪文ウーパールーパー"],
+  "item.shape-shifter-curse.custom_axolotl_spawn_egg": ["呪文ウーパールーパーのスポーンエッグ"],
+  "entity.shape-shifter-curse.t_ocelot": ["呪文ヤマネコ"],
+  "item.shape-shifter-curse.custom_ocelot_spawn_egg": ["呪文ヤマネコのスポーンエッグ"],
+  "entity.shape-shifter-curse.t_wolf": ["呪文さまようジャッカル亡霊"],
+  "item.shape-shifter-curse.custom_wolf_spawn_egg": ["呪文さまようジャッカル亡霊のスポーンエッグ"],
+  "entity.shape-shifter-curse.anubis_wolf_minion": ["ジャッカルの亡霊護衛"],
   "effect.shape-shifter-curse.to_bat_0_effect": [
-    "...奇怪的",
+    "…変な",
     {
-      "text": "蝙蝠", "color": "#0096FF"
+      "text": "コウモリ", "color": "#0096FF"
     },
     "?"
   ],
   "effect.shape-shifter-curse.to_axolotl_0_effect": [
-    "...奇怪的",
+    "…変な",
     {
-      "text": "美西螈", "color": "#0096FF"
+      "text": "ウーパールーパー", "color": "#0096FF"
     },
     "?"
   ],
   "effect.shape-shifter-curse.to_ocelot_0_effect": [
-    "...奇怪的",
+    "…変な",
     {
-      "text": "豹猫", "color": "#0096FF"
+      "text": "ヤマネコ", "color": "#0096FF"
     },
     "?"
   ],
   "effect.shape-shifter-curse.to_allay_sp_effect": [
     {
-      "text": "悦灵", "color": "#0096FF"
+      "text": "アレイ", "color": "#0096FF"
     },
-    "咒文...?"
+    "の咒文…?"
   ],
   "effect.shape-shifter-curse.to_feral_cat_sp_effect": [
     {
-      "text": "野性猫之", "color": "#0096FF"
+      "text": "ヨツケモネコ", "color": "#0096FF"
     },
-    "咒文...?"
+    "の咒文…?"
   ],
   "effect.shape-shifter-curse.to_familiar_fox_0_effect": [
-    "女巫的",
+    "ウィッチの",
     {
-      "text": "奇怪药水", "color": "#0096FF"
+      "text": "変なポーション", "color": "#0096FF"
     },
-    "...?"
+    "…?"
   ],
   "effect.shape-shifter-curse.to_snow_fox_0_effect": [
-    "净化后的",
+    "浄化した",
     {
-      "text": "女巫药水", "color": "#0096FF"
+      "text": "ウィッチのポーション", "color": "#0096FF"
     },
-    "...?"
+    "…?"
   ],
   "effect.shape-shifter-curse.to_anubis_wolf_0_effect": [
-    "...奇怪的",
+    "…変な",
     {
-      "text": "胡狼灵体", "color": "#0096FF"
+      "text": "ジャッカルの霊体", "color": "#0096FF"
     },
     "?"
   ],
 
   "effect.shape-shifter-curse.to_bat_0_effect.description": [
-    "你突然感到很",
+    "急にどっと",
     {
-      "text": "困倦", "color": "#0096FF"
+      "text": "疲れが", "color": "#0096FF"
     },
-    "，也许你应该去",
+    "出ている、",
     {
-      "text": "睡一觉", "color": "yellow"
+      "text": "寝た", "color": "yellow"
     },
-    "?"
+    "ほうがいいかもしれない?"
   ],
 
-  "item.minecraft.potion.effect.to_custom_statue_potion": ["自定义咒文药水"],
-  "item.minecraft.splash_potion.effect.to_custom_statue_potion": ["喷溅型自定义咒文药水"],
-  "item.minecraft.lingering_potion.effect.to_custom_statue_potion": ["滞留型自定义咒文药水"],
-  "item.minecraft.tipped_arrow.effect.to_custom_statue_potion": ["自定义咒文之箭"],
-  "effect.shape-shifter-curse.to_custom_statue_potion": ["自定义咒文"],
+  "item.minecraft.potion.effect.to_custom_statue_potion": ["カスタムの呪文のポーション"],
+  "item.minecraft.splash_potion.effect.to_custom_statue_potion": ["カスタムの呪文のスプラッシュポーション"],
+  "item.minecraft.lingering_potion.effect.to_custom_statue_potion": ["カスタムの呪文の残留ポーション"],
+  "item.minecraft.tipped_arrow.effect.to_custom_statue_potion": ["カスタムの呪文の矢"],
+  "effect.shape-shifter-curse.to_custom_statue_potion": ["カスタムの呪文"],
   "effect.shape-shifter-curse.to_custom_statue_effect": [
-    "...奇怪的",
+    "…変な",
     {
-      "text": "药水", "color": "#0096FF"
+      "text": "ポーション", "color": "#0096FF"
     },
     "?"
   ],
 
-  "commands.shape-shifter-curse.form_not_found": ["未找到指定的形态！"],
-  "power.shape-shifter-curse.form_carnivore.name":["肉食者"],
+  "commands.shape-shifter-curse.form_not_found": ["指定された形態が見つかりません！"],
+  "power.shape-shifter-curse.form_carnivore.name":["肉食性"],
   "power.shape-shifter-curse.form_allay_sp_amethyst_shard_only.name": ["水晶食性"],
   "power.shape-shifter-curse.form_ocelot_2_raw_meat_only.name": ["生肉食性"],
-  "power.shape-shifter-curse.form_familiar_fox_3_no_food.name": ["使魔体质"],
-  "power.shape-shifter-curse.prevent_ranged_weapon_use.name": ["禁用弓弩"],
-  "power.shape-shifter-curse.form_vegetarian.name": ["素食者"],
-  "power.shape-shifter-curse.no_shield.name":["持盾不能"],
-  "power.shape-shifter-curse.no_shield.description":["你双手的造型让你无法正常地手持盾牌。"],
-  "power.origins.vegetarian.name": ["素食者"],
-  "codex.header.status": ["状态"],
-  "codex.header.appearance": ["外观"],
+  "power.shape-shifter-curse.form_familiar_fox_3_no_food.name": ["使い魔の体質"],
+  "power.shape-shifter-curse.prevent_ranged_weapon_use.name": ["弓を使えない"],
+  "power.shape-shifter-curse.form_vegetarian.name": ["草食性"],
+  "power.shape-shifter-curse.no_shield.name":["盾を使えない"],
+  "power.shape-shifter-curse.no_shield.description":["この両爪の構造が盾を装備できない"],
+  "power.origins.vegetarian.name": ["草食性"],
+  "codex.header.status": ["状態"],
+  "codex.header.appearance": ["見た目"],
   "codex.header.pros": ["能力"],
-  "codex.header.cons": ["劣势"],
+  "codex.header.cons": ["ペナルティ"],
   "codex.header.instincts": ["本能"],
-  "codex.status.normal": ["当前，你感觉没什么特别的\n"],
-  "codex.status.infected": ["不知为何，你心中突然涌起莫名的",
+  "codex.status.normal": ["今のところ、特に何も感じない\n"],
+  "codex.status.infected": ["なぜか、言いようのない",
     {
-      "text": "困意", "color": "#0096FF"
+      "text": "眠気が", "color": "#0096FF"
     },
-    "，同时你觉察到你体内的魔法正在产生变化\n也许你应该去",
+    "急にどっとこみあげてきた、それと同時に、体内の魔力が変わっていることに気づいた\n",
     {
-      "text": "睡一觉", "color": "yellow"
+      "text": "寝た", "color": "yellow"
     },
-    "?\n"],
-  "codex.status.before_moon": ["你感觉到体内的魔法正在涌动，下一个夜晚，诅咒之月将会升起...\n"],
-  "codex.status.under_moon": ["诅咒之月的影响改变了你的身体...\n随着夜晚的结束，这一影响也会消退。不过...也许你应该善用这次机会?\n"],
-  "codex.desc.appearance_normal": ["你的身体感觉和往常没有太大区别。也许你体内的魔法需要一些契机才会产生效果？"],
-  "codex.desc.pros_normal": ["目前，你体内的魔法没有给你带来任何能觉察到的益处"],
-  "codex.desc.cons_normal": ["目前，你体内的魔法没有给你带来任何不利的影响"],
-  "codex.desc.instincts_normal": ["审视你的内心，你确实觉察到了身体中存在的某种魔法，不过也仅此而已。\n你的内心平静，保持着对周围环境的感知"],
-  "codex.desc.appearance_0": ["由于你体内的魔法与其他生物的共鸣，你的身体出现了一些变化。在这一阶段，一个金苹果便足以完全将其逆转…"],
-  "codex.desc.pros_0": ["你的新形态给了你一些额外的能力…"],
-  "codex.desc.cons_0": ["同时，你的新形态也带来了一些不便之处…"],
-  "codex.desc.instincts_0": ["你的脑海中出现了之前没有过的念头.."],
-  "codex.desc.appearance_1": ["被激化的魔法进一步改变了你的身体。你觉察到它正在试图达到某种新的稳态，某种..和原来的你完全不同的状态。\n也许在其进入到下一个阶段之前使用金苹果逆转它是个好主意..."],
-  "codex.desc.pros_1": ["你的新形态给了你更多额外的能力…"],
-  "codex.desc.cons_1": ["同时，你的新形态也带来了一些新的不便之处…"],
-  "codex.desc.instincts_1": ["你的脑海中其他生物本能的影响愈发明显..也许你应该试着抵御它们"],
-  "codex.desc.appearance_2": ["你体内的魔法几乎彻底改变了你。它进入了新的稳定状态，即使是金苹果也无济于补了…\n除非有某些“更加强大”的影响可以让它再次流动…"],
-  "codex.desc.pros_2": ["你的形态拥有这些力量"],
-  "codex.desc.cons_2": ["同时，你的形态也有一些不便的地方…"],
-  "codex.desc.instincts_2": ["你的本能不再困扰你，它们已经完全成为了你的一部分"],
-  "codex.desc.instincts_3": ["审视你的内心，你感觉到曾经在你体内变幻的魔力已然进入了新的稳定状态，即使是诅咒之月也无法撼动其分毫\n你的形态已经被永久性的改变了"],
+    "ほうがいいかもしれない?\n"],
+  "codex.status.before_moon": ["体内の魔力が沸き返るのを感じる、次の夜には、呪いの月が昇るのだ…\n"],
+  "codex.status.under_moon": ["呪いの月の影響がこの体に変化を引き起こした\n夜が終わるとともに、この影響も減退する。\nでも…この機会を活用したほうがいいかもしれない?"],
+  "codex.desc.appearance_normal": ["この体はいつもとあまり変わりないように感じる。この魔力の効果を引き起こすには、何かのきっかけが必要かもしれない？"],
+  "codex.desc.pros_normal": ["今のところ、体内の魔力はまだ目に見える恩恵をもたらしていない"],
+  "codex.desc.cons_normal": ["今のところ、体内の魔力はまだ不利な影響を引き起こしていない"],
+  "codex.desc.instincts_normal": ["内観してみれば、確かに体内に何の魔力があることは感知できる、だが、それだけだ\n心は依然として穏やかに、周囲の環境の感知力をもっている"],
+  "codex.desc.appearance_0": ["体内の魔法と他の生物の共鳴で、体はわずかな変化を生じた。この段階には、金のリンゴ一つで完全に逆転できる"],
+  "codex.desc.pros_0": ["新しい形態は追加の能力をもたらした…"],
+  "codex.desc.cons_0": ["それとともに、新しい形態も不便なことをもたらした…"],
+  "codex.desc.instincts_0": ["脳内には、今まで一度もなかった思いがうかんだ"],
+  "codex.desc.appearance_1": ["激された魔力はさらに体の変化を引き起こした。あれは何かの新しい穏やかな形態、何かの…元の自分と全然違う状態へと至ろうとしていることに気づく\n次の段階へと進める前に金のリンゴで逆転したほうがいいかもしれない…"],
+  "codex.desc.pros_1": ["新しい形態はもっと追加の能力をもたらした…"],
+  "codex.desc.cons_1": ["それとともに、新しい形態も他の不便なことをもたらした…"],
+  "codex.desc.instincts_1": ["脳内の他の生物の本能の影響がどんどん明らかなようになる…それを防ぎとめたほうがいいかもしれない"],
+  "codex.desc.appearance_2": ["体内の魔力が自分をほとんど徹底的に作り変えてしまった。それはもう新しい穏やかな状態が至って、金のリンゴにも何の役にも立てなっかた…\n何かの「もっと強い」影響がなければ、それをもう一度流転させることができない…"],
+  "codex.desc.pros_2": ["この形態には、これらの力がある"],
+  "codex.desc.cons_2": ["それとともに、この形態も不便な側面がある…"],
+  "codex.desc.instincts_2": ["この本能に悩まされることは、もうなくなった、それらはもはや完全に自分の一部となった"],
+  "codex.desc.instincts_3": ["内観してみれば、かつて体内に変転していた魔力はもう新しい穏やかな形態に至り、呪いの月ですら寸分も揺るがない\n体はもう恒久的に変わってしまった"],
 
-  "codex.form.shape-shifter-curse.original_shifter.title": ["\n整体而言，你是一个正常的人类"],
+  "codex.form.shape-shifter-curse.original_shifter.title": ["\n全般的に言えば、正常な人間だ"],
   "codex.form.shape-shifter-curse.original_shifter.appearance": [" "],
   "codex.form.shape-shifter-curse.original_shifter.pros": [" "],
   "codex.form.shape-shifter-curse.original_shifter.cons": [" "],
   "codex.form.shape-shifter-curse.original_shifter.instincts": [" "],
 
-  "codex.form.shape-shifter-curse.anubis_wolf_0.title": ["\n诅咒对你的身体产生了一些可见的影响。你身上出现了一些类似胡狼的特征，偶尔会有模糊的低语在你脑海中回荡"],
-  "codex.form.shape-shifter-curse.anubis_wolf_0.appearance": ["你发现你的耳朵不再处于本应该在的位置：它们向你的头顶移动，末端变尖，上面长出了淡金色的绒毛，看起来就像沙漠中出现的狼形灵体的一样\n黑黄相间的斑驳毛皮从你的四肢末端长出。在其下，你发现你的指甲变成了黑色，角质层也变得更加坚硬\n一条纤细匀称的尾部从你的尾骨延伸出来。其被短毛覆盖，颜色由根部的暗色逐渐过渡到末端的浅色\n\n令人在意的是，你偶尔能听见脑海中传来的低语声。你无法确定那是什么，似乎有某种外来的存在寄居在你的身体中…"],
+  "codex.form.shape-shifter-curse.anubis_wolf_0.title": ["\n呪いによって、体に目に見える変化が現れた。体にジャッカルのような特徴が現れた、たまにもうろうとしたささやきが脳内にこだまする"],
+  "codex.form.shape-shifter-curse.anubis_wolf_0.appearance": ["耳が元の場所にないことに気づいた―それらは頭のてっぺんへと移動し、末端はとがっていき、ふちに薄金色の綿毛が生えてきた、砂漠に現れたジャッカルのような霊体たちの耳と全く同じに見えた\n黒と黄色の縞模様の毛が両手と両足の先から生え始める\n尾てい骨から、すらりとしたしっぽが一本伸びる。その表面は短い毛におおわれている\n\n令人在意的是，你偶尔能听见脑海中传来的低语声。你无法确定那是什么，似乎有某种外来的存在寄居在你的身体中…"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.pros": ["寄居在你体内的外来存在带来了一些新的力量：\n亡灵的力量回荡在你的身体中。当你处于凋零状态时，你的攻击也会传播凋零效果，让目标附加两秒的凋零II状态\n感受到熟悉的气息，沙漠中的狼灵不再会主动攻击你\n\n变得更加锋利的牙齿让你可以毫不费力地嚼碎骨头\n你的消化系统开始变得更加接近于食腐物种的，你不再会受饥饿与中毒效果影响，腐肉带来的饱和度也更高"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.cons": ["寄居的外来存在改变了你的体质：\n当受到敌人攻击时，你体内的亡灵力量会被激发，让你陷入2.5秒的凋零I状态\n你新的力量对亡灵生物效果不佳，让你对它们的直接伤害稍有下降"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.instincts": ["你开始想要",
@@ -360,7 +360,7 @@
     }],
 
   "codex.form.shape-shifter-curse.anubis_wolf_1.title": ["\n无主的狼灵们的低语声愈发清晰。曾经属于它们的特征开始在你身上蔓延开来"],
-  "codex.form.shape-shifter-curse.anubis_wolf_1.appearance": ["由身体中部的黑色过渡到四肢末端的浅铜色，斑驳的短毛已经蔓延到了你躯干的大部分部位\n你的手足变成了更加接近爪子的结构。它们变得比之前稍微细长，革质的肉垫从掌中凸出\n你的耳部变得更大，尖端指向上方。值得注意的是，你发现从你的耳后长出了两簇金色的毛簇，远远看去如同某种耳饰一样\n你的尾部进一步延伸，变得更加修长。其末端的金色也变得更加显眼\n\n你脑海中的低语声变得愈发清晰。彷徨在沙漠中的无主狼灵依附在你的身上，在还有生命时，它们曾集群狩猎，紧密无间\n它们似乎没有敌意，反而会在危险时保护你。它们想从你这里得到什么？"],
+  "codex.form.shape-shifter-curse.anubis_wolf_1.appearance": ["由身体中部的黑色过渡到四肢末端的浅铜色，斑驳的短毛已经蔓延到了你躯干的大部分部位\n你的手足变成了更加接近爪子的结构。它们变得比之前稍微细长，革质的肉垫从掌中凸出\n你的耳部变得更大，尖端指向上方。值得注意的是，你发现从你的耳后长出了两簇金色的毛簇，远远看去如同某种耳饰一样\n你的尾部进一步延伸，变得更加修长。其末端的金色也变得更加显眼\n\n你脑海中的低语声变得愈发清晰。彷徨在沙漠中的无主狼灵依附在你的身上，在还有生命时，它们曾集群狩猎，紧密无间\n它们似乎没有敌意，反而会在危险时保护你。它们想从你这里得到什么?"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.pros": ["彷徨的狼灵凭依在你身上，带给了你新的能力：\n当你受到攻击时，一只狼灵会从你体内现身作为护卫，并在少许时间后消失。狼灵的攻击也会给目标带来1秒的凋零III效果\n你的亡灵之力进一步增强。当你处于凋零状态时，你的攻击会传播凋零效果，让目标附加一秒的凋零III状态，并同时吸收目标的少量生命值\n你现在可以在灵魂沙与灵魂土上迅捷移动，相当于灵魂疾行I的效果\n沙漠中的狼灵不再会主动攻击你\n\n你可以食用骨头\n你不再会受到饥饿与中毒效果，腐肉带来的饱和度也更高"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.cons": ["由于狼灵凭依的加深，你的体质进一步发生了变化：\n当受到敌人攻击时，被激发的亡灵力量会让你陷入4.5秒的凋零I状态\n你的触碰现在也带有亡灵之力。你现在有较小概率让击杀生物掉落的肉类腐烂，以及让收获的作物化为沙尘\n你的身体再生变得迟缓，从饱和度的生命值回复速度稍微减慢\n你的力量对亡灵生物效果不佳，让你对它们的直接伤害少许下降\n你的消化系统开始变得不再适合从素食中吸收养分，它们提供的饱和度减少"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.instincts": ["你想要尽可能",
@@ -492,7 +492,7 @@
     "你只能从肉类食物中获取能量"],
   "codex.form.shape-shifter-curse.axolotl_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
-    "你不会真的在考虑这件事情吧？"],
+    "你不会真的在考虑这件事情吧?"],
 
   "codex.form.shape-shifter-curse.axolotl_3.title": ["\n你的身体已经完成了向两栖类动物的转变。为了保持直立行走，你只能努力将身体向前倾斜来平衡尾部的重量",
     "\n\n专属饰品/工具：[喷泉腰带]"],
@@ -595,7 +595,7 @@
     "你的消化系统进一步改变，生肉是你现在食谱中唯一能为你提供能量的食物"],
   "codex.form.shape-shifter-curse.ocelot_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
-    "你不会真的在考虑这件事情吧？"],
+    "你不会真的在考虑这件事情吧?"],
   "codex.form.shape-shifter-curse.ocelot_3.title": ["\n'有人报告说在附近看到了一只大的出奇的白色豹猫。靠近森林时最好小心一些'",
     "\n\n专属饰品/工具：[肾上素颈环],[猫胡须颈环],[消化毛球]"],
   "codex.form.shape-shifter-curse.ocelot_3.appearance": ["除了皮毛的颜色与身体的尺寸以外，你整体看上去与一只野生豹猫几乎没有差别\n你是密林中的王者。在你敏锐的双眼与尖利的四爪下，任何生物都是你的狩猎目标"],
@@ -685,7 +685,7 @@
     "肉食不再能为你提供能量，你的身体已经彻底无法消化它们了"],
   "codex.form.shape-shifter-curse.bat_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
-    "你不会真的在考虑这件事情吧？"],
+    "你不会真的在考虑这件事情吧?"],
 
   "codex.form.shape-shifter-curse.bat_3.title": ["\n对于现在的你而言，一处凉爽而黑暗的洞窟可能更适合作为你的新家..",
     "\n\n专属饰品/工具：[黑夜水晶吊坠],[空心牙吊坠],[固着抓钩],[金刚石握爪]"],
@@ -784,7 +784,7 @@
     "你蓬松的毛皮进一步拖慢了你在水中的移动速度"],
   "codex.form.shape-shifter-curse.snow_fox_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
-    "你不会真的在考虑这件事情吧？"],
+    "你不会真的在考虑这件事情吧?"],
   "codex.form.shape-shifter-curse.snow_fox_3.title": ["\n你完全接纳了体内的那股寒冷的魔力，让它彻底改变了你。是时候在雪林中找一处新的巢穴了..",
     "\n\n专属饰品/工具：[计度温护符],[结霜护爪],[瓶装暴雪]"],
   "codex.form.shape-shifter-curse.snow_fox_3.appearance": ["除了异常蓬松的颈毛与近乎与身体等长的大尾巴以外，你整体看上去与一只野生雪狐别无二致\n",
@@ -868,7 +868,7 @@
     "\n\n专属饰品/工具：[守御脚环]"],
   "codex.form.shape-shifter-curse.familiar_fox_2.appearance": ["你的后足已经完全变成了趾行的结构，你的面部也向前突出形成了短小的吻部，让你看起来更加接近某种野兽\n",
     "除了黑色的四爪与头顶的三角形耳朵，以及面部下方与胸脯部分的白色软毛以外，你的身体大部分被厚实的橙红色皮毛完全覆盖\n",
-    "两条蓬松的红色尾巴在你身后摆动…等等，两条？这可有点异乎寻常\n",
+    "两条蓬松的红色尾巴在你身后摆动…等等，两条?这可有点异乎寻常\n",
     "青蓝色的火焰不时从你周身凭空出现，又缓慢消失\n\n",
     "很明显，这一形态所具有的魔力被其它人修改过了.."],
   "codex.form.shape-shifter-curse.familiar_fox_2.pros": ["外来的魔力\n",
@@ -893,7 +893,7 @@
     "你发现当你注视着女巫与唤魔者时，你会不自觉被它们的魔力吸引过去…"],
   "codex.form.shape-shifter-curse.familiar_fox_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
-    "你不会真的在考虑这件事情吧？"],
+    "你不会真的在考虑这件事情吧?"],
   "codex.form.shape-shifter-curse.familiar_fox_3.title": ["\n‘幻形者非常适合作为使魔。对魔法具有亲和性，又拥有足够的智慧…\n",
     "看来我们已经找到了正确的方法’",
     "\n\n专属饰品/工具：[守御脚环]"],
@@ -945,9 +945,9 @@
     "由于漂浮在空中，你移动的惯性更大，让你更难停下\n你躯干的下半部分消失了，你不再能装备腿甲与鞋"],
   "codex.form.shape-shifter-curse.allay_sp.instincts": ["\n\n\n与其它形态相比，你觉察到你当前的形态似乎有些“特别之处”：它并没有对你的内心造成太多影响，似乎也没有那么稳定。如果你希望的话，应该可以较为容易地将其逆转"],
   "codex.form.shape-shifter-curse.feral_cat_sp.title": ["喵.."],
-  "codex.form.shape-shifter-curse.feral_cat_sp.appearance": ["喵？"],
+  "codex.form.shape-shifter-curse.feral_cat_sp.appearance": ["喵?"],
   "codex.form.shape-shifter-curse.feral_cat_sp.pros": ["喵呜嗷..."],
-  "codex.form.shape-shifter-curse.feral_cat_sp.cons": ["喵...喵？"],
+  "codex.form.shape-shifter-curse.feral_cat_sp.cons": ["喵...喵?"],
   "codex.form.shape-shifter-curse.feral_cat_sp.instincts": ["喵...."],
   "tooltip.shape_shifter_curse.morphscale_item": "塑形物品",
   "tooltip.shape_shifter_curse.potion_target_form": "目标形态: ",
