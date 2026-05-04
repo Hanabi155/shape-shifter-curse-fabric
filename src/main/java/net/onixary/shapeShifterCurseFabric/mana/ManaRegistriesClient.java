@@ -27,6 +27,8 @@ public class ManaRegistriesClient {
 
     static {
         registerManaTypeRender(ManaRegistries.FAMILIAR_FOX_MANA, new FamiliarFoxManaBar());
+        registerManaTypeRender(ManaRegistries.WEB_RESOURCE, new WebResourceBar());
+        registerManaTypeRender(ManaRegistries.DP_MANA, new FamiliarFoxManaBar());
     }
 
     public static void register() {}

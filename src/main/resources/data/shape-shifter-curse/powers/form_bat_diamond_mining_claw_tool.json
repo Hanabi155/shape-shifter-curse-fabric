@@ -16,13 +16,9 @@
                 "weapon.mainhand"
             ]
         },
-        "hardness_modifier": {
-                "operation": "max_total",
-                "value": 5
-        },
         "modifier": {
-            "operation": "multiply_base",
-            "value": 12.0
+            "operation": "multiply_base_additive",
+            "value": 2.0
         }
     },
 
@@ -43,7 +39,7 @@
         },
         "modifier": {
             "operation": "addition",
-            "value": 10.0
+            "value": 4.0
         }
     }
 }

@@ -52,12 +52,33 @@ public class TransformManager {
         public float nauesaStrength = 0.0f;
         public float blackStrength = 0.0f;
         public boolean isTransforming = false;
+
+        public void reset() {
+            this.beginTransformEffectTicks = 0;
+            this.endTransformEffectTicks = 0;
+            this.isEffectActive = false;
+            this.isEndEffectActive = false;
+            this.curFromForm = null;
+            this.curToForm = null;
+            this._isByCursedMoon = false;
+            this._isByCursedMoonEnd = false;
+            this._isRegressedFromFinal = false;
+            this._isByCure = false;
+            this.nauesaStrength = 0.0f;
+            this.blackStrength = 0.0f;
+            this.isTransforming = false;
+        }
     }
     // 仅客户端数据
     private static final boolean IS_FIRST_PERSON_MOD_LOADED = FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT && FabricLoader.getInstance().isModLoaded("firstperson");
     public static final PlayerTransformData LocalPlayerTransformData = new PlayerTransformData();
     // 仅服务端数据
     public static final HashMap<UUID, PlayerTransformData> PlayerTransformDataMap = new HashMap<>();
+
+    public static void onServerInit() {
+        PlayerTransformDataMap.clear();
+        LocalPlayerTransformData.reset();
+    }
 
     // 仅服务器端 - 获取PlayerTransformData
     public static PlayerTransformData getPlayerTransformData(PlayerEntity player) {
@@ -83,8 +104,8 @@ public class TransformManager {
 
         // 如果在服务端，同步状态到客户端
         if (player instanceof ServerPlayerEntity serverPlayer) {
-            String fromFormName = data.curFromForm != null ? data.curFromForm.name() : null;
-            String toFormName = data.curToForm != null ? data.curToForm.name() : null;
+            String fromFormName = data.curFromForm != null ? data.curFromForm.getIDString() : null;
+            String toFormName = data.curToForm != null ? data.curToForm.getIDString() : null;
 
             ModPacketsS2CServer.sendTransformState(serverPlayer, transforming, fromFormName, toFormName);
             ShapeShifterCurseFabric.LOGGER.info("Sent transform state to client: " + transforming +
@@ -105,7 +126,6 @@ public class TransformManager {
 
         RegPlayerFormComponent.PLAYER_FORM.get(player).setByCursedMoon(isByCursedMoon);
         RegPlayerFormComponent.PLAYER_FORM.sync(player);
-        FormAbilityManager.saveForm(player);
         ShapeShifterCurseFabric.LOGGER.info("Progressive transform started, isByCursedMoon: " + isByCursedMoon + ", from: " + data.curFromForm);
         int currentFormIndex = currentForm.getIndex();
         PlayerFormGroup currentFormGroup = currentForm.getGroup();
@@ -166,9 +186,6 @@ public class TransformManager {
         applyStartTransformEffect((ServerPlayerEntity) player, StaticParams.TRANSFORM_FX_DURATION_IN);
         handleTransformEffect(player);
         RegPlayerFormComponent.PLAYER_FORM.sync(player);
-        FormAbilityManager.saveForm(player);
-        MinecraftServer server = player.getServer();
-        syncCursedMoonData(player, server);
     }
 
     // 仅服务端
@@ -230,8 +247,6 @@ public class TransformManager {
         RegPlayerFormComponent.PLAYER_FORM.sync(player);
         ShapeShifterCurseFabric.LOGGER.info("Moon end transform，_isByCursedMoonEnd=" + data._isByCursedMoonEnd +
                 "，component isByCursedMoon=" + RegPlayerFormComponent.PLAYER_FORM.get(player).isByCursedMoon());
-        MinecraftServer server = player.getServer();
-        syncCursedMoonData(player, server);
     }
 
     // 仅服务端
@@ -377,7 +392,7 @@ public class TransformManager {
         // 只在客户端执行
         // transform时重置firstperson offset
         // Reset firstperson offset when transforming
-        if(IS_FIRST_PERSON_MOD_LOADED) {
+        if(IS_FIRST_PERSON_MOD_LOADED && ShapeShifterCurseFabric.clientConfig.enableChangeFPMConfig) {
             FirstPersonModelCore fpm = FirstPersonModelCore.instance;
             fpm.getConfig().xOffset = 0;
             fpm.getConfig().sitXOffset = 0;
@@ -452,22 +467,6 @@ public class TransformManager {
         handleTransformEffect(player);
         applyStartTransformEffect((ServerPlayerEntity) player, StaticParams.TRANSFORM_FX_DURATION_IN);
         // FormAbilityManager.applyForm(player, toForm);
-        MinecraftServer server = player.getServer();
-        syncCursedMoonData(player, server);
-    }
-
-    // 双端 但我觉得是仅服务端 继承于handleDirectTransform
-    private static void syncCursedMoonData(PlayerEntity player, MinecraftServer server){
-        /*if(FormAbilityManager.getForm(player) == PlayerForms.ORIGINAL_BEFORE_ENABLE){
-            ShapeShifterCurseFabric.LOGGER.info("Cursed moon disabled");
-            ShapeShifterCurseFabric.cursedMoonData.getInstance().disableCursedMoon(server.getOverworld());
-        }
-        else{
-            ShapeShifterCurseFabric.LOGGER.info("Cursed moon enabled");
-            ShapeShifterCurseFabric.cursedMoonData.getInstance().enableCursedMoon(server.getOverworld());
-        }*/
-        ShapeShifterCurseFabric.LOGGER.info("Cursed moon data saved by syncCursedMoonData");
-        ShapeShifterCurseFabric.cursedMoonData.getInstance().save(server.getOverworld());
     }
 
     // 双端 但我觉得是仅服务端 继承于handleDirectTransform
@@ -529,8 +528,6 @@ public class TransformManager {
         sendClientFirstPersonReset(player);
 
         RegPlayerFormComponent.PLAYER_FORM.sync(data.curPlayer);
-        MinecraftServer server = player.getServer();
-        syncCursedMoonData(player, server);
     }
 
     // 新增：发送客户端FirstPerson重置
@@ -554,7 +551,7 @@ public class TransformManager {
             return;
         }
 
-        if(IS_FIRST_PERSON_MOD_LOADED){
+        if(IS_FIRST_PERSON_MOD_LOADED && ShapeShifterCurseFabric.clientConfig.enableChangeFPMConfig) {
             FirstPersonModelCore fpm = FirstPersonModelCore.instance;
             fpm.getConfig().xOffset = 0;
             fpm.getConfig().sitXOffset = 0;

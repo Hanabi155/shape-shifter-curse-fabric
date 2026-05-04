@@ -29,7 +29,6 @@
     "SneakEdgeCheckMixin",
     "StatusEffectMixin",
     "ThrowablePotionStackMixin",
-    "WaterFlexibilityMixin",
     "accessor.ActiveTargetGoalAccessor",
     "block.PowderSnowBlockMixin",
     "block.SweetBerryBushBlockMixin",
@@ -43,12 +42,15 @@
     "projectile.PotionEntityMixin",
     "VirtualTotemMixin",
     "MinionPlayerEntityMixin",
+    "accessor.PowerTypeRegistryAccessor",
+    "MinionPlayerEntityMixin",
     "HungerManagerMixin",
     "EntityLootingMixin",
     "BlockDropMixin",
-    "ScareSkeletonMixin",
+    "mob.ScareSkeletonMixin",
     "PlayerAnimInterfaceMixin",
-    "TrinketItemMixin",
+    "accessory.TrinketItemMixin",
+    "accessory.TrinketImpl",
     "PotionItemMixin",
     "PotionEntityMixin",
     "AreaEffectCloudEntityMixin",
@@ -56,7 +58,13 @@
     "LingeringPotionItemMixin",
     "TippedArrowItemMixin",
     "BrewingRecipeRegistryMixin",
-    "HissPhantomMixin"
+    "HissPhantomMixin",
+    "EnchantmentUtilAnvilMixin",
+    "EnchantmentUtilEnchantCommandMixin",
+    "EntityMixin",
+    "DefaultAttributeRegistryMixin",
+    "mob.SpiderEntityMixin",
+    "mob.IronGolemEntityMixin"
   ],
   "client": [
     "AdjustItemHoldFeatureRendererMixin",
@@ -80,8 +88,14 @@
     "PlayerEntityRendererFallFlyingMixin",
     "PlayerEntitySpeedFOVMixin",
     "PlayerMovementControlMixin",
+    "DisablePlayerRotationRendererMixin",
     "PlayerRotationRendererMixin",
-    "accessor.ApoliClientAccessor"
+    "accessor.ApoliClientAccessor",
+    "integration.TacZ_Anim",
+    "integration.TacZ_AnimThird",
+    "PlayerClipAtLedgeMixin",
+    "CameraBobbingMixin",
+    "EntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

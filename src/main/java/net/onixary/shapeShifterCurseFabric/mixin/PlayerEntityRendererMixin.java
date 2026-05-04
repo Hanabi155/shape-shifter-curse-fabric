@@ -1,6 +1,8 @@
 package net.onixary.shapeShifterCurseFabric.mixin;
 
 
+import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.render.entity.PlayerModelPart;
 import net.onixary.shapeShifterCurseFabric.integration.origins.component.PlayerOriginComponent;
 import net.onixary.shapeShifterCurseFabric.integration.origins.origin.OriginLayers;
 import net.onixary.shapeShifterCurseFabric.integration.origins.registry.ModComponents;
@@ -23,6 +25,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import net.onixary.shapeShifterCurseFabric.player_form_render.*;
+import net.onixary.shapeShifterCurseFabric.util.ClientUtils;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -124,6 +127,9 @@ public class PlayerEntityRendererMixin {
     @Pseudo
     @Mixin(value = LivingEntityRenderer.class, priority = 99999)
     public static abstract class LivingEntityRendererMixin$HidePlayerModelIfNeeded<T extends LivingEntity, M extends EntityModel<T>> implements IPlayerEntityMixins {
+        @Unique
+        private final boolean BetterCombatInstalled = FabricLoader.getInstance().isModLoaded("bettercombat");
+
         @Shadow
         @Final
         protected List<FeatureRenderer<T, M>> features;
@@ -169,10 +175,28 @@ public class PlayerEntityRendererMixin {
                 at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/entity/model/EntityModel;render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;IIFFFF)V",
                         shift = At.Shift.BEFORE))
         private void renderPreProcessMixin(T livingEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, CallbackInfo ci) {
+            boolean IsClientNowPlayedPlayer = livingEntity instanceof ClientPlayerEntity;
+            boolean IsFirstPersonView = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
             if (livingEntity instanceof AbstractClientPlayerEntity abstractClientPlayerEntity) {
                 isInvisible = false;
                 PlayerOriginComponent c = (PlayerOriginComponent) ModComponents.ORIGIN.get(abstractClientPlayerEntity);
                 for (var layer : OriginLayers.getLayers()) {
+                    if (abstractClientPlayerEntity.isSpectator()) {
+                        PlayerEntityModel<?> model = (PlayerEntityModel<?>) this.getModel();
+                        model.hat.hidden = false;
+                        model.head.hidden = false;
+                        model.body.hidden = false;
+                        model.jacket.hidden = false;
+                        model.leftArm.hidden = false;
+                        model.leftSleeve.hidden = false;
+                        model.rightArm.hidden = false;
+                        model.rightSleeve.hidden = false;
+                        model.leftLeg.hidden = false;
+                        model.leftPants.hidden = false;
+                        model.rightLeg.hidden = false;
+                        model.rightPants.hidden = false;
+                        return;
+                    }
                     var origin = c.getOrigin(layer);
                     if (origin == null) {
                         return;
@@ -192,18 +216,22 @@ public class PlayerEntityRendererMixin {
                         if (!isInvisible) {
                             var p = m_Model.getHiddenParts();
                             var model = (PlayerEntityModel<?>) this.getModel();
-                            model.hat.visible = !p.contains(OriginFurModel.VMP.hat);
+                            model.hat.visible = !p.contains(OriginFurModel.VMP.hat) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.HAT);
                             model.head.visible = !p.contains(OriginFurModel.VMP.head);
                             model.body.visible = !p.contains(OriginFurModel.VMP.body);
-                            model.jacket.visible = !p.contains(OriginFurModel.VMP.jacket);
+                            model.jacket.visible = !p.contains(OriginFurModel.VMP.jacket) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.JACKET);
                             model.leftArm.visible = !p.contains(OriginFurModel.VMP.leftArm);
-                            model.leftSleeve.visible = !p.contains(OriginFurModel.VMP.leftSleeve);
+                            model.leftSleeve.visible = !p.contains(OriginFurModel.VMP.leftSleeve) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.LEFT_SLEEVE);
                             model.rightArm.visible = !p.contains(OriginFurModel.VMP.rightArm);
-                            model.rightSleeve.visible = !p.contains(OriginFurModel.VMP.rightSleeve);
+                            model.rightSleeve.visible = !p.contains(OriginFurModel.VMP.rightSleeve) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.RIGHT_SLEEVE);
                             model.leftLeg.visible = !p.contains(OriginFurModel.VMP.leftLeg);
-                            model.leftPants.visible = !p.contains(OriginFurModel.VMP.leftPants);
+                            model.leftPants.visible = !p.contains(OriginFurModel.VMP.leftPants) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.LEFT_PANTS_LEG);
                             model.rightLeg.visible = !p.contains(OriginFurModel.VMP.rightLeg);
-                            model.rightPants.visible = !p.contains(OriginFurModel.VMP.rightPants);
+                            model.rightPants.visible = !p.contains(OriginFurModel.VMP.rightPants) && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.RIGHT_PANTS_LEG);
+                            if (this.BetterCombatInstalled && IsFirstPersonView && IsClientNowPlayedPlayer && ClientUtils.ShouldEnableBetterCombatFix()) {
+                                model.hat.visible = false;
+                                model.head.visible = false;
+                            }
                         }
                     }
                 }
@@ -227,6 +255,9 @@ public class PlayerEntityRendererMixin {
                 PlayerOriginComponent c = (PlayerOriginComponent) ModComponents.ORIGIN.get(aCPE);
                 int p = getOverlayMixin(livingEntity, this.getAnimationCounter(livingEntity, g));
                 for (var layer : OriginLayers.getLayers()) {
+                    if (aCPE.isSpectator()) {
+                        return;
+                    }
                     var origin = c.getOrigin(layer);
                     if (origin == null) {
                         return;

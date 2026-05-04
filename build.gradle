@@ -169,7 +169,7 @@ dependencies {
     modRuntimeOnly "io.wispforest:owo-lib:${owo_version}"
 
     // Rich Translatable Text
-    modLocalRuntime "curse.maven:rich-translatable-text-1342784:6975662"
+    modLocalRuntime "curse.maven:rich-translatable-text-1342784:7440321"
 
     // satin shader
     modImplementation "org.ladysnake:satin:${satin_version}"
@@ -218,7 +218,7 @@ dependencies {
 
     // Trinkets
 
-    modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+    modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
 
     // Fabric forge config api port
     // modLocalRuntime "fuzs.forgeconfigscreens:forgeconfigscreens-fabric:8.0.0"
@@ -242,6 +242,8 @@ dependencies {
 
     modCompileOnly "maven.modrinth:vivecraft:9Sa2NEEb"
     annotationProcessor(files("libs/mixinextras-fabric-0.2.0-beta.8.jar"))
+
+    modCompileOnly "maven.modrinth:tacz-refabricated:HxQ3IsAZ" // TaCZ: Refabricated 1.20.1-0.4.0-forge1.1.7-hotfix
 
 }
 

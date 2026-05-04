@@ -17,16 +17,21 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.VertexFormats;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.onixary.shapeShifterCurseFabric.ShapeShifterCurseFabric;
 import net.onixary.shapeShifterCurseFabric.additional_power.CustomEdiblePower;
+import net.onixary.shapeShifterCurseFabric.additional_power.ItemStorePower;
 import net.onixary.shapeShifterCurseFabric.additional_power.LevitatePower;
+import net.onixary.shapeShifterCurseFabric.blocks.RegCustomBlock;
 import net.onixary.shapeShifterCurseFabric.custom_ui.BookOfShapeShifterScreenV2_P1;
 import net.onixary.shapeShifterCurseFabric.custom_ui.StartBookScreenV2;
 import net.onixary.shapeShifterCurseFabric.data.StaticParams;
+import net.onixary.shapeShifterCurseFabric.entity.RegCustomEntityRenderer;
 import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.axolotl.TAxolotlEntityRenderer;
 import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.bat.BatEntityRenderer;
 import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.ocelot.TOcelotEntityRenderer;
+import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.spider.TSpiderEntityRenderer;
 import net.onixary.shapeShifterCurseFabric.integration.origins.Origins;
 import net.onixary.shapeShifterCurseFabric.items.RegCustomItem;
 import net.onixary.shapeShifterCurseFabric.items.armors.MorphscaleArmorRenderer;
@@ -39,6 +44,7 @@ import net.onixary.shapeShifterCurseFabric.networking.ModPacketsS2C;
 import net.onixary.shapeShifterCurseFabric.player_animation.RegPlayerAnimation;
 import net.onixary.shapeShifterCurseFabric.render.render_layer.FurGradientRenderLayer;
 import net.onixary.shapeShifterCurseFabric.util.ClientTicker;
+import net.onixary.shapeShifterCurseFabric.util.PatronUtils;
 import net.onixary.shapeShifterCurseFabric.util.TickManager;
 import org.lwjgl.glfw.GLFW;
 
@@ -59,7 +65,11 @@ public class ShapeShifterCurseFabricClient implements ClientModInitializer {
 	}
 	private static ShaderProgram furGradientShader;
 
+	public static KeyBinding toggleClipAtLedge;
 	public static KeyBinding makeSound;
+
+	private static boolean toggleClipAtLedgeIsPressed = false;
+	public static boolean isClipAtLedge = true;
 
 	public static void openBookScreen(PlayerEntity user) {
 		// 仅当owo_lib加载时才能调用旧版页面，否则回退回新版
@@ -131,6 +141,8 @@ public class ShapeShifterCurseFabricClient implements ClientModInitializer {
 		EntityRendererRegistry.register(T_AXOLOTL, TAxolotlEntityRenderer::new);
 		EntityRendererRegistry.register(T_OCELOT, TOcelotEntityRenderer::new);
 		EntityRendererRegistry.register(T_WOLF, AnubisWolfMinionEntityRenderer::new);
+		EntityRendererRegistry.register(T_SPIDER, TSpiderEntityRenderer::new);
+
 		MinionRegisterClient.registerClient();
 	}
 
@@ -158,7 +170,10 @@ public class ShapeShifterCurseFabricClient implements ClientModInitializer {
 			return;
 		}
 		// Mana System
-		ManaUtils.manaTick(minecraftClient.player);
+		if (!MinecraftClient.getInstance().isPaused()) {
+			ManaUtils.manaTick(minecraftClient.player);
+		}
+		PowerHolderComponent.getPowers(clientPlayer, ItemStorePower.class).forEach(ItemStorePower::clientTick);
 	}
 
 	public static void emitTransformParticle(int duration) {
@@ -279,6 +294,7 @@ public class ShapeShifterCurseFabricClient implements ClientModInitializer {
         registerAzureArmorGeo();
 
 		ManaRegistriesClient.register();
+		RegCustomEntityRenderer.init();
 
 		ClientTickEvents.END_CLIENT_TICK.register(ShapeShifterCurseFabricClient::onClientTick);
 		// 客户端能力处理
@@ -301,6 +317,24 @@ public class ShapeShifterCurseFabricClient implements ClientModInitializer {
 		makeSound = new KeyBinding("key.shape-shifter-curse.make_sound", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_GRAVE_ACCENT, "category." + MOD_ID);
 		ApoliClient.registerPowerKeybinding("make_sound", makeSound);
 		KeyBindingHelper.registerKeyBinding(makeSound);
+		toggleClipAtLedge = new KeyBinding("key.shape-shifter-curse.toggle_clip_at_ledge", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "category." + MOD_ID);
+		KeyBindingHelper.registerKeyBinding(toggleClipAtLedge);
+		ClientTickEvents.END_CLIENT_TICK.register((client) -> {
+			if (toggleClipAtLedge.isPressed()) {
+				if (!toggleClipAtLedgeIsPressed) {
+					isClipAtLedge = !isClipAtLedge;
+                    if (client.player != null) {
+                        client.player.sendMessage(Text.translatable("message.shape-shifter-curse.clip_at_ledge." + (isClipAtLedge ? "on" : "off")), true);
+                    }
+				}
+				toggleClipAtLedgeIsPressed = true;
+			} else {
+				toggleClipAtLedgeIsPressed = false;
+			}
+		});
+
+		RegCustomBlock.ClientInit();
+		PatronUtils.OnClientInit();
 	}
 
 	public static ShaderProgram getFurGradientShader() {

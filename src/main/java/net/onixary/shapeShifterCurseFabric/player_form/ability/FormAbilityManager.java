@@ -8,8 +8,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.onixary.shapeShifterCurseFabric.ShapeShifterCurseFabric;
-import net.onixary.shapeShifterCurseFabric.data.PlayerNbtStorage;
-import net.onixary.shapeShifterCurseFabric.integration.origins.Origins;
 import net.onixary.shapeShifterCurseFabric.integration.origins.component.OriginComponent;
 import net.onixary.shapeShifterCurseFabric.integration.origins.origin.Origin;
 import net.onixary.shapeShifterCurseFabric.integration.origins.origin.OriginLayer;
@@ -79,7 +77,9 @@ public class FormAbilityManager {
         clearFormEffects(player, oldForm);
         // 已被弃用，使用json定义的scale power
         //applyScale(player, config.getScale());
+        // applyFormOrigin必须最先执行 因为它同时负责清除上个形态的power数据
         applyFormOrigin(player, newForm);
+        applyExtraPower(player, oldForm, newForm);
         try {
             ApplyOriginExtraPower(player, ModComponents.ORIGIN.get(player).getOrigin(OriginLayers.getLayer(newForm.getFormOriginLayerID())).getIdentifier());
         }
@@ -95,15 +95,15 @@ public class FormAbilityManager {
         component.setCurrentForm(newForm);
         RegPlayerFormComponent.PLAYER_FORM.sync(player);
         // 存储
-        FormAbilityManager.saveForm(player);
+        // FormAbilityManager.saveForm(player);
 
         TrinketUtils.ReApplyAccessoryPowerOnPlayerFormChange(player);
 
         // 添加网络同步：通知客户端形态已变化
         if (!player.getWorld().isClient() && player instanceof ServerPlayerEntity serverPlayer) {
             try {
-                ModPacketsS2CServer.sendFormChange(serverPlayer, newForm.name());
-                ShapeShifterCurseFabric.LOGGER.info("Sent form change notification to client: " + newForm.name());
+                ModPacketsS2CServer.sendFormChange(serverPlayer, newForm.getIDString());
+                ShapeShifterCurseFabric.LOGGER.info("Sent form change notification to client: " + newForm.getIDString());
             } catch (Exception e) {
                 ShapeShifterCurseFabric.LOGGER.error("Failed to send form change notification: ", e);
             }
@@ -112,7 +112,7 @@ public class FormAbilityManager {
 
     public static void loadForm(PlayerEntity player) {
         PlayerFormComponent component = player.getComponent(RegPlayerFormComponent.PLAYER_FORM);
-        PlayerFormBase savedForm = loadSavedForm(player);
+        PlayerFormBase savedForm = RegPlayerFormComponent.PLAYER_FORM.get(player).getCurrentForm();;
         if (savedForm != null) {
             applyForm(player, savedForm);
         }
@@ -122,23 +122,7 @@ public class FormAbilityManager {
     }
 
     public static void saveForm(PlayerEntity player) {
-        // 添加世界检查
-        if (world == null && player instanceof ServerPlayerEntity serverPlayer) {
-            world = serverPlayer.getServerWorld();
-        }
-
-        if (world != null) {
-            PlayerFormComponent component = player.getComponent(RegPlayerFormComponent.PLAYER_FORM);
-            PlayerNbtStorage.savePlayerFormComponent(world, player.getUuid().toString(), component);
-        } else {
-            ShapeShifterCurseFabric.LOGGER.warn("Cannot save form: world is null");
-        }
-    }
-
-    private static PlayerFormBase loadSavedForm(PlayerEntity player) {
-        // 从存储中加载保存的 form
-        PlayerFormComponent formComponent = PlayerNbtStorage.loadPlayerFormComponent(world, player.getUuid().toString());
-        return formComponent != null ? formComponent.getCurrentForm() : null;
+        RegPlayerFormComponent.PLAYER_FORM.sync(player);
     }
 
     private static void clearFormEffects(PlayerEntity player, PlayerFormBase oldForm) {
@@ -172,10 +156,53 @@ public class FormAbilityManager {
     }
 
     private static void applyPower(PlayerEntity player, Identifier powerId, Identifier powerSource) {
-        PowerType<?> powerType = PowerTypeRegistry.get(powerId);
-        if (powerType != null) {
-            PowerHolderComponent powerHolder = PowerHolderComponent.KEY.get(player);
-            powerHolder.addPower(powerType, powerSource);
+        if (PowerTypeRegistry.contains(powerId)) {
+            PowerType<?> powerType = PowerTypeRegistry.get(powerId);
+            if (powerType != null) {
+                PowerHolderComponent powerHolder = PowerHolderComponent.KEY.get(player);
+                powerHolder.addPower(powerType, powerSource);
+            }
+        }
+        else {
+            // 每0.1秒最多20次尝试应用能力 (ExtraPower中注册太慢)
+            new Thread(() -> {
+                try {
+                    boolean FoundPower = false;
+                    for (int i = 0; i < 20; i++) {
+                        Thread.sleep(100);
+                        if (PowerTypeRegistry.contains(powerId)) {
+                            FoundPower = true;
+                            break;
+                        }
+                    }
+                    if (FoundPower) {
+                        PowerType<?> powerType = PowerTypeRegistry.get(powerId);
+                        if (powerType != null) {
+                            PowerHolderComponent powerHolder = PowerHolderComponent.KEY.get(player);
+                            powerHolder.addPower(powerType, powerSource);
+                        }
+                    }
+                    else {
+                        ShapeShifterCurseFabric.LOGGER.warn("Failed to apply power " + powerId.toString() + " for player " + player.getName() + " after 2 seconds");
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+    }
+
+    public static void applyExtraPower(PlayerEntity playerEntity, PlayerFormBase oldForm, PlayerFormBase newForm) {
+        PowerHolderComponent powerComponent = PowerHolderComponent.KEY.get(playerEntity);
+        // 移除旧形态的额外能力
+        // if (oldForm instanceof PlayerFormDynamic pfd) {
+        //     powerComponent.removeAllPowersFromSource(pfd.FormID);
+        // }
+        // 添加新形态的额外能力
+        if (newForm instanceof PlayerFormDynamic pfd) {
+            for (Identifier powerID: pfd.getExtraPower()) {
+                applyPower(playerEntity, powerID, pfd.getFormOriginID());
+            }
         }
     }
 }

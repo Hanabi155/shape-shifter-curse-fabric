@@ -9,7 +9,6 @@ import net.minecraft.util.math.Vec3d;
 import net.onixary.shapeShifterCurseFabric.data.CodexData;
 import net.onixary.shapeShifterCurseFabric.integration.origins.Origins;
 import net.onixary.shapeShifterCurseFabric.player_animation.AnimationHolder;
-import net.onixary.shapeShifterCurseFabric.player_animation.v2.PlayerAnimState;
 import net.onixary.shapeShifterCurseFabric.player_animation.v3.AbstractAnimStateController;
 import net.onixary.shapeShifterCurseFabric.player_animation.v3.AnimSystem;
 import org.jetbrains.annotations.NotNull;
@@ -27,6 +26,7 @@ public class PlayerFormBase {
     private boolean CanSneakRush = false;
     private boolean CanRushJump = false;
     private boolean IsCustomForm = false;
+    private boolean IgnoreCursedMoon = false;
 
     private boolean IsRegisteredPowerAnim = false;
 
@@ -81,15 +81,6 @@ public class PlayerFormBase {
         return new Pair<>(false, null);
     }
 
-    // 1代2代动画控制器使用 等3代测试完就删除
-    public void Anim_registerAnims() {
-        return;
-    }
-
-    public AnimationHolder Anim_getFormAnimToPlay(PlayerAnimState currentState) {
-        return null;
-    }
-
     public boolean getHasSlowFall() {
         return HasSlowFall;
     }
@@ -132,6 +123,15 @@ public class PlayerFormBase {
 
     public PlayerFormBase setIsCustomForm(boolean isCustomForm) {
         IsCustomForm = isCustomForm;
+        return this;
+    }
+
+    public boolean getIgnoreCursedMoon() {
+        return IgnoreCursedMoon;
+    }
+
+    public PlayerFormBase setIgnoreCursedMoon(boolean ignoreCursedMoon) {
+        IgnoreCursedMoon = ignoreCursedMoon;
         return this;
     }
 
@@ -181,8 +181,12 @@ public class PlayerFormBase {
         return false;
     }
 
-    public String name() {
+    public String getIDString() {
         return FormID.toString();
+    }
+
+    public Text getFormName() {
+        return Text.translatable("codex.form." + FormID.getNamespace() + "." + FormID.getPath() + ".name");
     }
 
     public PlayerFormBase setOriginNameSpaceOverWrite(String nameSpace) {
