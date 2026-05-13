@@ -8,7 +8,12 @@
         "shape-shifter-curse:form_spider_1_jump_height",
         "shape-shifter-curse:form_spider_1_darkness",
         "shape-shifter-curse:form_spider_1_particle",
-        "shape-shifter-curse:prevent_sprinting"
+        "shape-shifter-curse:prevent_sprinting",
+        "shape-shifter-curse:form_spider_1_in_cocoon_features",
+      "shape-shifter-curse:form_spider_1_instinct_max_particle",
+
+        "shape-shifter-curse:form_spider_1_cocoon_instinct",
+        "shape-shifter-curse:form_spider_1_base_instinct"
     ],
     "icon": {
         "item": "minecraft:player_head"
