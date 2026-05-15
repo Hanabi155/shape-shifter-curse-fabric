@@ -39,7 +39,7 @@
     "item.minecraft.splash_potion.effect.moondust_potion": ["月の粉のスプラッシュポーション"],
     "item.minecraft.lingering_potion.effect.moondust_potion": ["月の粉の残留ポーション"],
   "item.minecraft.tipped_arrow.effect.moondust_potion": ["月の粉の矢"],
-  "effect.shape-shifter-curse.moondust_potion": ["月の粉の精粋はその内で渦巻いている、真価を引き出すにはさらなる加工が必要です"],
+  "effect.shape-shifter-curse.moondust_potion": ["月の粉の精粋は、その内で渦巻いている、真価を引き出すには、さらなる加工が必要です"],
   "item.minecraft.potion.effect.to_bat_0_potion": ["コウモリの呪文のポーション"],
   "item.minecraft.splash_potion.effect.to_bat_0_potion": ["コウモリの呪文のスプラッシュポーション"],
   "item.minecraft.lingering_potion.effect.to_bat_0_potion": ["コウモリの呪文の残留ポーション"],
@@ -69,7 +69,7 @@
   "item.minecraft.splash_potion.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文のスプラッシュポーション"],
   "item.minecraft.lingering_potion.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文の残留ポーション"],
   "item.minecraft.tipped_arrow.effect.to_familiar_fox_0_potion": ["キツネ使い魔の呪文の矢"],
-  "effect.shape-shifter-curse.to_familiar_fox_0_potion": ["その中に秘められた魔力は既に改竄されている、金塊で浄化できるかもしれない"],
+  "effect.shape-shifter-curse.to_familiar_fox_0_potion": ["その中に秘められた魔力は、既に改竄されている…金塊で浄化できるかもしれない"],
   "item.minecraft.potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文のポーション"],
   "item.minecraft.splash_potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文のスプラッシュポーション"],
   "item.minecraft.lingering_potion.effect.to_snow_fox_0_potion": ["雪キツネの呪文の残留ポーション"],
@@ -77,9 +77,15 @@
   "effect.shape-shifter-curse.to_snow_fox_0_potion": ["浄化した後、手触りはちょっと冷たいです"],
   "item.minecraft.potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文のポーション"],
   "item.minecraft.splash_potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文のスプラッシュポーション"],
-  "item.minecraft.lingering_potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文の"],
+  "item.minecraft.lingering_potion.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文の残留ポーション"],
   "item.minecraft.tipped_arrow.effect.to_anubis_wolf_0_potion": ["ジャッカルの呪文の矢"],
   "effect.shape-shifter-curse.to_anubis_wolf_0_potion": ["なにか暗い色の魂がポーション瓶の中に泳いでいる…ちょっと普通じゃないように見える"],
+  "item.minecraft.potion.effect.to_spider_0_potion": ["クモの呪文のポーション"],
+    "item.minecraft.splash_potion.effect.to_spider_0_potion": ["クモの呪文のスプラッシュポーション"],
+    "item.minecraft.lingering_potion.effect.to_spider_0_potion": ["クモの呪文の残留ポーション"],
+  "item.minecraft.tipped_arrow.effect.to_spider_0_potion": ["クモの呪文の矢"],
+  "effect.shape-shifter-curse.to_spider_0_potion": ["それは柔らかく、絹のような質感がある"],
+
 
   "item.minecraft.potion.effect.feed_potion": ["圧縮エネルギーのポーション"],
   "item.minecraft.splash_potion.effect.feed_potion": ["圧縮エネルギーのスプラッシュポーション"],
@@ -146,6 +152,26 @@
   "item.shape-shifter-curse.resonant_core": ["共振の結晶核"],
   "item.shape-shifter-curse.resonant_core.tooltip": ["[アレイ形態専用]アメジストの欠片を食べると周囲のエンティティに再生能力の効果を与えるが、ただし隠し満腹度は回復しなくなる"],
   "block.shape-shifter-curse.moondust_crystal_grit": ["月の粉の結晶砂利"],
+  "block.shape-shifter-curse.temp_web_bridge": ["架け橋としての蜘蛛の糸"],
+  "block.shape-shifter-curse.web_composter": ["液化の繭"],
+  "item.shape-shifter-curse.spider_fluid_cocoon": ["液化の食糧のう"],
+  "item.shape-shifter-curse.spider_fluid_cocoon.tooltip": ["液体の栄養液を蓄える蜘蛛糸の袋、食べる場合は自己責任で"],
+  "item.shape-shifter-curse.venom_spindle": ["毒矢糸の紡錘"],
+  "item.shape-shifter-curse.venom_spindle.tooltip": ["[クモ形態専用]蜘蛛糸の弾が生物に命中した際、ダメージを与えるとともに、 付与する効果が移動速度低下や巻き付けから毒へと替わる"],
+  "block.shape-shifter-curse.dew_covered_cobweb" : ["結露の蜘蛛巣"],
+  "item.shape-shifter-curse.silk_dew": ["蜘蛛糸の液"],
+  "item.shape-shifter-curse.auxiliary_axe": ["副手用の斧"],
+  "item.shape-shifter-curse.auxiliary_axe.tooltip": ["副腕の両手に装備する際に、近接攻撃力が上昇するが、攻撃速度は低下する"],
+  "item.shape-shifter-curse.auxiliary_sword": ["副手用の剣"],
+  "item.shape-shifter-curse.auxiliary_sword.tooltip": ["副腕の両手に装備する際に、近接攻撃の速度が上昇するが、ブキの耐久度の消費はさらに増加する"],
+  "item.shape-shifter-curse.auxiliary_pickaxe": ["副手用のツルハシ"],
+  "item.shape-shifter-curse.auxiliary_pickaxe.tooltip": ["副腕の両手に装備する際に、採掘速度が上昇するが、近接攻撃力は低下する"],
+  "item.shape-shifter-curse.web_projectile": ["蜘蛛糸の弾"],
+  "item.shape-shifter-curse.web_projectile.tooltip": ["高度に圧縮した蜘蛛の糸の玉、不安定な性質をもち、破裂すると網状の構造物を大量に生成する。そいえば、どうやってこのものを手に入れたんだ？"],
+
+  "item.shape-shifter-curse.select_form_item": ["形態変更の巻物"],
+  "item.shape-shifter-curse.select_form_item.tooltip": ["[管理者専用]自分や相手に使用して、自分またはほかの管理者以外のプレイヤーの形態を設定する"],
+
   "screen.shape-shifter-curse.book_of_shape_shifter.start_content_text":
   [
     "この本を開いて読んでみた瞬間、かすかな痛みを伴って、本の中にあふれる奇妙な魔法が指先から体へと流れるのを感じて、感電したようにパッと手をひっこめた\n",
@@ -158,7 +184,7 @@
     "color": "#0096FF"
   },"が起きるということだ\n\n",
     {
-      "text": "※ご注意してください：\nこれにより、「ケモののろい(\"Shape Shifter Curse\")」のMODコンテンツが解放されます\nこれは万人向けのモッドではありませんので、進める前に、必ずそのテーマとプレイスタイルを把握しておいてください\n\n",
+      "text": "※ご注意してください：\nこれにより、「ケモののろい(\"Shape Shifter Curse\")」のMODコンテンツが有効になります\nこれは万人向けのモッドではありませんので、進める前に、必ずそのテーマとプレイスタイルを把握しておいてください\n\n",
       "color": "#ed721d"
     },
     {
@@ -215,6 +241,11 @@
   "entity.shape-shifter-curse.t_wolf": ["呪文さまようジャッカル亡霊"],
   "item.shape-shifter-curse.custom_wolf_spawn_egg": ["呪文さまようジャッカル亡霊のスポーンエッグ"],
   "entity.shape-shifter-curse.anubis_wolf_minion": ["ジャッカルの亡霊護衛"],
+  "entity.shape-shifter-curse.t_spider": ["呪文クモ"],
+  "item.shape-shifter-curse.custom_spider_spawn_egg": ["呪文クモのスポーンエッグ"],
+  "effect.shape-shifter-curse.entangled_effect": ["巻き付け"],
+  "effect.shape-shifter-curse.entangled_full_effect": ["繭巻き"],
+
   "effect.shape-shifter-curse.to_bat_0_effect": [
     "…変な",
     {
@@ -236,6 +267,14 @@
     },
     "?"
   ],
+  "effect.shape-shifter-curse.to_spider_0_effect": [
+    "…変な",
+    {
+      "text": "クモ", "color": "#0096FF"
+    },
+    "?"
+  ],
+
   "effect.shape-shifter-curse.to_allay_sp_effect": [
     {
       "text": "アレイ", "color": "#0096FF"
@@ -340,12 +379,15 @@
   "codex.desc.instincts_2": ["この本能に悩まされることはもうなくなった、それらはもはや完全に自分の一部となった"],
   "codex.desc.instincts_3": ["内観してみれば、かつて体内に変転していた魔力はもう新しい穏やかな形態に至り、呪いの月ですら寸分も揺るがない\n体はもう恒久的に変わってしまった"],
 
+  "codex.form.shape-shifter-curse.original_before_enable.name": ["MODを有効化する前"],
+  "codex.form.shape-shifter-curse.original_shifter.name": ["変化者の初期形態"],
   "codex.form.shape-shifter-curse.original_shifter.title": ["\n全般的に言えば、正常な人間だ"],
   "codex.form.shape-shifter-curse.original_shifter.appearance": [" "],
   "codex.form.shape-shifter-curse.original_shifter.pros": [" "],
   "codex.form.shape-shifter-curse.original_shifter.cons": [" "],
   "codex.form.shape-shifter-curse.original_shifter.instincts": [" "],
 
+  "codex.form.shape-shifter-curse.anubis_wolf_0.name" : ["ジャッカルの形態(第0段階)"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.title": ["\n呪いによって、体に目に見える変化が現れた。体にジャッカルのような特徴が現れた、たまにもうろうとしたささやきが頭の中にこだまする"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.appearance": ["耳が元の場所にないことに気づいた―それらは頭のてっぺんへと移動し、末端はとがっていき、ふちに薄金色の綿毛が生えてきた、砂漠に現れたジャッカルのような霊体たちの耳と全く同じに見えた\n黒と黄色の縞模様の毛が両手と両足の先から生え始める\n尾てい骨から、すらりとしたしっぽが一本伸びる。その表面は短い毛におおわれている\n\n気になるのは、たまに頭の中から聞こえてくるささやき。それは何なのか今まだわからない、外来の何者かが体につきまとっている…"],
   "codex.form.shape-shifter-curse.anubis_wolf_0.pros": ["体に宿る外来者は新しい力をもたらした：\n亡霊の力は体にこだまする、ウィザー状態になると、アタックでもこの効果を付与できるようになり，目標に2秒間のウィザーII状態を与える\n見覚えがある気配によって、ジャッカルの魂はもう襲ってこなくなった\n\nさらに鋭くなったキバは、骨をかみ砕くことがお手の物だ\n腐肉食動物的になっていた消化系は、もう空腹や毒の状態異常の影響を受けなくなるとともに、腐った肉による満腹度もより高くなる"],
@@ -361,7 +403,7 @@
     },
     "なった"
   ],
-
+  "codex.form.shape-shifter-curse.anubis_wolf_1.name" : ["ジャッカルの形態(第1段階)"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.title": ["\n主がないジャッカル霊たちのささやきはますます鮮やかになる。それらに属した特徴が、今や体にはびこっている"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.appearance": ["体の中心の黒から四肢にかけて茶色へと移り変わる色の、まだらの短い毛がもう胴体のほとんどをはびこっていた\n両手足はより爪に近い構造へと変わっていた。以前よりもやや細長くなり、革のような肉球は手のひらから盛り上がっている\n耳ももっと大きくなり、先端が上にとがっている。目を引くのは、耳の後ろに金色の毛が二つ生えたことだ、遠目には、まるで何かの耳飾りのように見える\nしっぽもさらに伸びて、以前より細長くなっている。その先端の金色も以前よりさらに目立つようになった\n\n頭の中のささやきはますますはっきりとしてきた。砂漠をさまよう主なきジャッカル霊たちはその身に憑依している、命があったころは、それらは群れを成して狩りを行い、強い絆で結ばれて生きていた\nそれらは敵意を抱いていないようだ、むしろ危機が迫った時には守ってくれることさえある。それらはいったい何を求めているのだろうか?"],
   "codex.form.shape-shifter-curse.anubis_wolf_1.pros": ["さまようジャッカル霊はその身に憑依し、新しい力をもたらした：\n攻撃を受けると、一匹のジャッカル霊が体内から現れて守ってくれて、そのあと少し間をおいて消滅する\nその身の亡霊の力はさらに強くなった。ウィザー状態にある間は、攻撃によってウィザー状態を伝染させて、相手に1秒間のウィザーIII状態を付与する\n今はソウルサンドやソウルソイルにより速く移動でき、ソウルスピードIの効果に相当する\n砂漠のジャッカル霊たちはもう自発的に攻撃しなかった\n\n骨を食べることができる\nもう空腹や毒の状態異常の影響を受けなくなるとともに、腐った肉による満腹度もより高くなる"],
@@ -387,6 +429,7 @@
     },
     "という思いが沸き上がってきた"],
 
+  "codex.form.shape-shifter-curse.anubis_wolf_2.name" : ["ジャッカルの形態(第2段階)"],
   "codex.form.shape-shifter-curse.anubis_wolf_2.title": ["\n二本足で歩けること以外は、今やほとんど一匹の起死回生を遂げ、もう一度肉体を得たジャッカルの亡霊がこの身の姿だ",
     "\n\n専用アクセサリー/道具：[ウィザーのヌノ]"],
   "codex.form.shape-shifter-curse.anubis_wolf_2.appearance": ["短い毛はもはやほとんど全身を覆った\n",
@@ -415,6 +458,7 @@
     "この新しい構造の足には、もう普通のレギンスやブーツは体に合わず，装備することはできない"],
   "codex.form.shape-shifter-curse.anubis_wolf_2.instincts": [" "],
 
+  "codex.form.shape-shifter-curse.anubis_wolf_3.name" : ["ジャッカルの形態(永続段階)"],
   "codex.form.shape-shifter-curse.anubis_wolf_3.title": ["\n群れの魂と阿吽の呼吸のごとく混ざり合い、よみがえった群れを率いていくことこそが、使命である",
     "\n\n専用アクセサリー/道具：[ウィザーのヌノ]"],
   "codex.form.shape-shifter-curse.anubis_wolf_3.appearance": ["魔力の活性化とともに、群れの本質は自身の一部と完全に混ざり合いはじめる\n",
@@ -442,8 +486,9 @@
     "普通のレギンスやブーツが、みんなの四つ足の構造の体には合わなかった"],
   "codex.form.shape-shifter-curse.anubis_wolf_3.instincts": [" "],
 
-  "codex.form.shape-shifter-curse.axolotl_0.title": ["\n诅咒对你的身体产生了一些可见的影响。除此之外，你有一种想要浸没在水中的冲动。"],
-  "codex.form.shape-shifter-curse.axolotl_0.appearance": ["你的脸颊两侧生长出了几丛淡红色的簇状结构，它们总是处于潮湿状态，似乎能帮你补充一部分氧气\n",
+  "codex.form.shape-shifter-curse.axolotl_0.name": ["ウーパールーパー形態(第0段階)"],
+  "codex.form.shape-shifter-curse.axolotl_0.title": ["\n呪いによって、体に目に見える変化が現れた。それとともに、水に沈みたいという衝動が湧き上がってきた"],
+  "codex.form.shape-shifter-curse.axolotl_0.appearance": ["頬の両側に、淡黄色の房状の構造がいくつか芽吹き、それらは常に濡れており、一部の酸素を直接取り込めるようだった\n",
     "你注意到波浪状的半透明鳍膜开始附着在你四肢的末端与新长出的尾部上\n",
     "你的皮肤似乎开始变得有些潮湿"],
   "codex.form.shape-shifter-curse.axolotl_0.pros": ["由于新的氧气供应，你可以在水下活动更长时间\n",
@@ -457,6 +502,7 @@
     {
       "text":" 待在繁茂洞穴群系中", "color":"#c67681"
     }],
+  "codex.form.shape-shifter-curse.axolotl_1.name": ["ウーパールーパー形態(第1段階)"],
   "codex.form.shape-shifter-curse.axolotl_1.title": ["\n生长后的鳃与有力的尾部让你能够自由探索被淹没的结构。刚捕获的鱼类是最适合你的食物"],
   "codex.form.shape-shifter-curse.axolotl_1.appearance": ["你脸颊两侧的鳃丛进一步生长。在水中，它们几乎可以供给你所需的所有氧气\n",
     "你身上的鳍膜进一步生长，覆盖了你身体的更多部分。它们的颜色似乎变得更加鲜艳了\n",
@@ -484,6 +530,8 @@
     {
       "text":"\n在垂滴叶丛中漫游", "color":"#c67681"
     },"的想法开始吸引你"],
+
+  "codex.form.shape-shifter-curse.axolotl_2.name": ["ウーパールーパー形態(第2段階)"],
   "codex.form.shape-shifter-curse.axolotl_2.title": ["\n作为两栖类的一员，你是水中的掠食者，同时也能在陆地上活动——只是务必记得保持湿润"],
   "codex.form.shape-shifter-curse.axolotl_2.appearance": ["你的尾部现在更接近你躯干的延伸，它几乎占据了身高的一半\n",
     "发达的鳃丛占据了你头部的一大部分空间。它们几乎替代了肺部的作用，只要它们还处于湿润状态，你无需呼吸就能获得充沛的氧气\n",
@@ -507,6 +555,7 @@
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
     "你不会真的在考虑这件事情吧?"],
 
+  "codex.form.shape-shifter-curse.axolotl_3.name": ["ウーパールーパー形態(永続段階)"],
   "codex.form.shape-shifter-curse.axolotl_3.title": ["\n你的身体已经完成了向两栖类动物的转变。为了保持直立行走，你只能努力将身体向前倾斜来平衡尾部的重量",
     "\n\n专属饰品/工具：[喷泉腰带]"],
   "codex.form.shape-shifter-curse.axolotl_3.appearance": ["进一步生长的尾部已经成为了你身体的主干，其上附着发达的鳍膜，让你能够在水下迅捷的移动\n",
@@ -535,6 +584,7 @@
     "你只能从肉类食物中获取能量"],
   "codex.form.shape-shifter-curse.axolotl_3.instincts": [""],
 
+  "codex.form.shape-shifter-curse.ocelot_0.name" : ["ヤマネコ形態(第0段階)"],
   "codex.form.shape-shifter-curse.ocelot_0.title": ["\n诅咒对你产生了一些可见的影响。你发现你的身体在潜行时变得更加自然协调"],
   "codex.form.shape-shifter-curse.ocelot_0.appearance": ["你的耳朵移动到了头顶，它们现在被斑驳的绒毛覆盖，外形介于三角与半圆之间，看起来有点类似某种猫科动物的\n",
     "你的四肢末端被带斑点的白色皮毛覆盖，看起来有点像是一双厚实的手套或袜子。在皮毛之下，你的手指似乎也产生了一些变化，它们似乎比之前更加有力\n",
@@ -554,6 +604,7 @@
     {
       "text":" 待在丛林群系中", "color":"#c67681"
     }],
+  "codex.form.shape-shifter-curse.ocelot_1.name" : ["ヤマネコ形態(第1段階)"],
   "codex.form.shape-shifter-curse.ocelot_1.title": ["\n更多的猫科动物特征让你能够在树林中自如攀越，并使用有力的前爪发动致命一击。现在生肉似乎比熟食更加吸引你"],
   "codex.form.shape-shifter-curse.ocelot_1.appearance": ["斑驳的毛皮现在覆盖了你的胸腹与后背的大部分区域。它们与你脖颈的毛领相连，看起来就像是一件斗篷\n",
     "带斑点的白色皮毛从你的四肢末端进一步向上生长。在皮毛之下，你手掌与足部的结构变得更接近猫科动物，它们现在有可以伸缩的锐利爪子以及提供缓冲的软垫\n",
@@ -583,6 +634,8 @@
     {
       "text":"想要爬到树冠顶部的冲动", "color":"#c67681"
     }],
+
+  "codex.form.shape-shifter-curse.ocelot_2.name" : ["ヤマネコ形態(第2段階)"],
   "codex.form.shape-shifter-curse.ocelot_2.title": ["\n四足行动对于现在的你而言是最自然的姿态。当蹲坐在地面上时，你几乎和某种大型猫科动物没有什么区别",
     "\n\n专属饰品/工具：[肾上素颈环],[猫胡须颈环],[消化毛球]"],
   "codex.form.shape-shifter-curse.ocelot_2.appearance": ["你头顶的耳朵变得更大也更加灵活，你注意到它们会自动转向声音来源的方位\n",
@@ -609,6 +662,8 @@
   "codex.form.shape-shifter-curse.ocelot_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
     "你不会真的在考虑这件事情吧?"],
+
+  "codex.form.shape-shifter-curse.ocelot_3.name" : ["ヤマネコ形態(永続段階)"],
   "codex.form.shape-shifter-curse.ocelot_3.title": ["\n'有人报告说在附近看到了一只大的出奇的白色豹猫。靠近森林时最好小心一些'",
     "\n\n专属饰品/工具：[肾上素颈环],[猫胡须颈环],[消化毛球]"],
   "codex.form.shape-shifter-curse.ocelot_3.appearance": ["除了皮毛的颜色与身体的尺寸以外，你整体看上去与一只野生豹猫几乎没有差别\n你是密林中的王者。在你敏锐的双眼与尖利的四爪下，任何生物都是你的狩猎目标"],
@@ -628,6 +683,7 @@
     "任何护甲对你运动的阻碍都让你难以忍受。现在你只能穿戴头盔，也无法正常使用盾牌"],
   "codex.form.shape-shifter-curse.ocelot_3.instincts": [""],
 
+  "codex.form.shape-shifter-curse.bat_0.name" : ["コウモリ形態(第0段階)"],
   "codex.form.shape-shifter-curse.bat_0.title": ["\n诅咒对你的身体产生了一些影响，让你看起来像某些翼手目的生物。你感到黑暗的环境在吸引着你。",
     "\n\n专属饰品/工具：[黑夜水晶吊坠],[空心牙吊坠]"],
   "codex.form.shape-shifter-curse.bat_0.appearance": ["你的手臂外侧延伸出了附有皮膜的附肢\n",
@@ -644,6 +700,8 @@
       "text":" 待在溶洞群系中", "color":"#c67681"
     }
   ],
+
+  "codex.form.shape-shifter-curse.bat_1.name" : ["コウモリ形態(第1段階)"],
   "codex.form.shape-shifter-curse.bat_1.title": ["\n新的视觉与力量让你在洞穴与深夜的黑暗中游刃有余。现在，只是想到暴露在日光下的念头就会让你感到难受。",
     "\n\n专属饰品/工具：[黑夜水晶吊坠],[空心牙吊坠]"],
   "codex.form.shape-shifter-curse.bat_1.appearance": ["你的耳朵现在位于头顶，它们变得又大又尖，朝向前方\n",
@@ -678,6 +736,8 @@
     {
       "text":"\n被滴水石块围绕", "color":"#c67681"
     },"的想法开始吸引你"],
+
+  "codex.form.shape-shifter-curse.bat_2.name" : ["コウモリ形態(第2段階)"],
   "codex.form.shape-shifter-curse.bat_2.title": ["\n作为翼手目生物的一员，你喜欢和你的同类一起在夜空中滑翔。",
     "\n\n专属饰品/工具：[黑夜水晶吊坠],[空心牙吊坠],[固着抓钩],[金刚石握爪]"],
   "codex.form.shape-shifter-curse.bat_2.appearance": ["你的耳朵现在占据了你头顶的大部分空间，让你能够分辨周围最细微的声音\n",
@@ -700,6 +760,7 @@
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
     "你不会真的在考虑这件事情吧?"],
 
+  "codex.form.shape-shifter-curse.bat_3.name" : ["コウモリ形態(永続段階)"],
   "codex.form.shape-shifter-curse.bat_3.title": ["\n对于现在的你而言，一处凉爽而黑暗的洞窟可能更适合作为你的新家..",
     "\n\n专属饰品/工具：[黑夜水晶吊坠],[空心牙吊坠],[固着抓钩],[金刚石握爪]"],
   "codex.form.shape-shifter-curse.bat_3.appearance": ["细密的绒毛完全覆盖了你的身体，近乎与头部等大的双耳帮助你定位四周的环境，让你不会遗漏周围哪怕最细微的声响\n",
@@ -721,6 +782,7 @@
     "肉食不再能为你提供能量，你的身体已经彻底无法消化它们了"],
   "codex.form.shape-shifter-curse.bat_3.instincts": [" "],
 
+  "codex.form.shape-shifter-curse.snow_fox_0.name": ["雪キツネ形態(第0段階)"],
   "codex.form.shape-shifter-curse.snow_fox_0.title":["\n诅咒对你的身体产生了一些影响，白色的绒毛开始从你身上生长出来。你有点想要在雪地上奔跑",
     "\n\n专属饰品/工具：[计度温护符]"],
   "codex.form.shape-shifter-curse.snow_fox_0.appearance": ["你的肢体末端长出了灰蓝色的软毛。你注意到它们的颜色在手部与足部会更深一些\n",
@@ -743,6 +805,8 @@
     {
       "text":" 在雪地上奔跑", "color":"#c67681"
     }],
+
+  "codex.form.shape-shifter-curse.snow_fox_1.name": ["雪キツネ形態(第1段階)"],
   "codex.form.shape-shifter-curse.snow_fox_1.title": ["\n白色与灰蓝色的绒毛在你身上进一步蔓延，一条雪白的蓬松尾巴在你身后摆动",
     "\n\n专属饰品/工具：[计度温护符]"],
   "codex.form.shape-shifter-curse.snow_fox_1.appearance": ["白色与灰蓝色的绒毛进一步在你身上蔓延。你的四肢与躯干上部已经几乎被厚实的皮毛所覆盖\n",
@@ -774,6 +838,8 @@
       "text":"待在甜浆果丛中的想法", "color":"#c67681"
     },"开始吸引你"
   ],
+
+  "codex.form.shape-shifter-curse.snow_fox_2.name": ["雪キツネ形態(第2段階)"],
   "codex.form.shape-shifter-curse.snow_fox_2.title": ["你现在的样子几乎与一只直立行走的雪狐别无二致",
     "\n\n专属饰品/工具：[计度温护符],[结霜护爪],[瓶装暴雪]"],
   "codex.form.shape-shifter-curse.snow_fox_2.appearance": ["你的后足已经完全变成了趾行的结构，你的面部也向前突出形成了短小的吻部，让你看起来更加接近某种野兽\n",
@@ -798,6 +864,8 @@
   "codex.form.shape-shifter-curse.snow_fox_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
     "你不会真的在考虑这件事情吧?"],
+
+  "codex.form.shape-shifter-curse.snow_fox_3.name": ["雪キツネ形態(永続段階)"],
   "codex.form.shape-shifter-curse.snow_fox_3.title": ["\n你完全接纳了体内的那股寒冷的魔力，让它彻底改变了你。是时候在雪林中找一处新的巢穴了..",
     "\n\n专属饰品/工具：[计度温护符],[结霜护爪],[瓶装暴雪]"],
   "codex.form.shape-shifter-curse.snow_fox_3.appearance": ["除了异常蓬松的颈毛与近乎与身体等长的大尾巴以外，你整体看上去与一只野生雪狐别无二致\n",
@@ -825,6 +893,7 @@
     "你蓬松的毛皮进一步拖慢了你在水中的移动速度"],
   "codex.form.shape-shifter-curse.snow_fox_3.instincts": [""],
 
+  "codex.form.shape-shifter-curse.familiar_fox_0.name": ["キツネ使い魔形態(第0段階)"],
   "codex.form.shape-shifter-curse.familiar_fox_0.title":["\n诅咒对你的身体产生了一些影响，橙红色的毛簇开始从你身上生长出来。你有点想要在雪地上奔跑",
     "\n\n专属饰品/工具：[守御脚环]"],
   "codex.form.shape-shifter-curse.familiar_fox_0.appearance": ["你的肢体末端长出了黑色的软毛。在向上蔓延的过程中，它们的颜色会逐渐过渡到橙红色\n",
@@ -847,6 +916,8 @@
     {
       "text":" 在雪地上奔跑", "color":"#c67681"
     }],
+
+  "codex.form.shape-shifter-curse.familiar_fox_1.name": ["キツネ使い魔形態(第1段階)"],
   "codex.form.shape-shifter-curse.familiar_fox_1.title": ["\n橙红色的毛发在你身上进一步蔓延，一条红色的蓬松尾巴在你身后摆动",
     "\n\n专属饰品/工具：[守御脚环]"],
   "codex.form.shape-shifter-curse.familiar_fox_1.appearance": ["橙红色的毛皮进一步在你身上蔓延。你的四肢与躯干上部已经几乎被厚实的皮毛所覆盖\n",
@@ -877,6 +948,8 @@
       "text":"靠近并观察它们", "color":"#c67681"
     }
   ],
+  
+  "codex.form.shape-shifter-curse.familiar_fox_2.name": ["キツネ使い魔形態(第2段階)"],
   "codex.form.shape-shifter-curse.familiar_fox_2.title": ["你现在看起来很像一只直立行走的红狐，不过有些事情有点不对劲…",
     "\n\n专属饰品/工具：[守御脚环]"],
   "codex.form.shape-shifter-curse.familiar_fox_2.appearance": ["你的后足已经完全变成了趾行的结构，你的面部也向前突出形成了短小的吻部，让你看起来更加接近某种野兽\n",
@@ -907,6 +980,8 @@
   "codex.form.shape-shifter-curse.familiar_fox_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
     "一剂共鸣催化剂可以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
     "你不会真的在考虑这件事情吧?"],
+
+  "codex.form.shape-shifter-curse.familiar_fox_3.name": ["キツネ使い魔形態(永続段階)"],
   "codex.form.shape-shifter-curse.familiar_fox_3.title": ["\n‘幻形者非常适合作为使魔。对魔法具有亲和性，又拥有足够的智慧…\n",
     "看来我们已经找到了正确的方法’",
     "\n\n专属饰品/工具：[守御脚环]"],
@@ -938,6 +1013,46 @@
     "腿甲与鞋不再适合你的四足身体结构，你在水中的移动速度也变得更慢\n",
     "村民们害怕你，它们会主动避开你"],
   "codex.form.shape-shifter-curse.familiar_fox_3.instincts": [""],
+
+    "codex.form.shape-shifter-curse.spider_0.name": ["クモ形態(第0段階)"],
+  "codex.form.shape-shifter-curse.spider_0.title": ["\n诅咒对你的身体产生了一些可见的影响。一些几丁质的外壳开始覆盖在你的体表，液态的丝线开始从你新的后腹部分泌出来"],
+  "codex.form.shape-shifter-curse.spider_0.appearance": ["你的体表开始生长出来一些硬质外壳。它们由几丁质构成，轻巧而坚实\n液态的丝线从你新长出的后腹部分泌出来。你发现自己本能地知道如何编织压缩的丝线团，它们可以被投掷来阻碍你的目标，以及搭建可供攀援的网架\n你的躯干两侧与后腹根部分别长出了一对覆盖着外壳的突起。集中精神，你发现自己可以在某种程度上控制它们稍微移动\n\n与其他形态不同，你察觉到你的变化现在处于停滞状态——新的本能向你低语：你需要一些特殊的催化材料，一个安全的地方，以及一些时间来达成完全的蜕变"],
+  "codex.form.shape-shifter-curse.spider_0.pros": ["你的身体现在可以产生高密度的丝线团——按住主要能力键蓄力并放开，你可以消耗蛛网值发射出蛛丝弹。根据蓄力程度产生不同的效果：\n\n命中方块的侧面或底面时，可以从命中点向下延伸出可供攀爬的不具粘性的桥梁蛛丝结构\n命中生物时，可以为其施加缓慢与虚弱效果\n\n你的身体不再会受到中毒影响\n你不会受到蛛网阻碍。你可以攀爬蛛网，并感知到陷入网中的实体"],
+  "codex.form.shape-shifter-curse.spider_0.cons": ["你的消化系统正在朝着更适合节肢掠食者的方向变化，让你从非肉食的食物中获取的饱和度减少\n节肢杀手附魔的武器会对你造成更多伤害\n你的尾部长出的附肢突起让你无法穿戴腿甲"],
+  "codex.form.shape-shifter-curse.spider_0.instincts": ["出于某种原因，你感受到你的形态受月之潮汐的影响较弱…诅咒之月与普通的催化剂无法对你当前的形态产生足够的影响\n",
+    "取而代之的是，编织",
+    {
+      "text":"[结露蛛网]", "color":"#c67681"
+    },"，并用它们搭建一个丝巢的想法开始吸引你\n",
+    "首先，你需要收集咒文蜘蛛掉落的",
+    {
+      "text":"[蛛网胶滴]", "color":"#c67681"
+    },"，之后寻觅一个安全且隐蔽的地方..."],
+
+  "codex.form.shape-shifter-curse.spider_1.name": ["クモ形態(第1段階)"],
+  "codex.form.shape-shifter-curse.spider_1.title": ["\n一个不时颤动的巨大丝茧被包裹在网巢中"],
+  "codex.form.shape-shifter-curse.spider_1.appearance": ["在结露蛛网的催化下，你后腹部分泌出大量的丝线，编织为坚固的丝茧并将你完全包裹在其中\n你感觉四周非常潮湿，想要发出移动身体的指令，但是回应你的只有一片混沌…你是被浸泡在某种粘稠的流体中么？还是说你就是这些流体本身?\n\n你无法描述自己现在的感觉。唯一可以确定的是，在丝茧之中，你的身体正在发生着某种激烈的变化"],
+  "codex.form.shape-shifter-curse.spider_1.pros": ["你不知道该如何感受自己现在的身体，唯有等待"],
+  "codex.form.shape-shifter-curse.spider_1.cons": ["你不知道该如何感受自己现在的身体，唯有等待"],
+  "codex.form.shape-shifter-curse.spider_1.instincts": ["被包裹在丝茧中，你唯一能做的事情只有在结露蛛网的环绕下等待蜕变完成"],
+
+  "codex.form.shape-shifter-curse.spider_2.name": ["クモ形態(第2段階)"],
+  "codex.form.shape-shifter-curse.spider_2.title": ["\n作为蜕变后的节肢生物，你的身体虽然保持着与原本相似的外形，但其甲壳下的运作方式已经完全不同\n\n专属饰品/工具：[副手剑],[副手镐],[副手斧],[盾牌(额外手臂槽位)],[不死图腾(额外手臂槽位)],[流食囊(额外手臂槽位)],[箭毒纺锤]"],
+  "codex.form.shape-shifter-curse.spider_2.appearance": ["你的体表已经变化成了几丁质的外壳。它们替代了你原本的骨骼，支撑你如今分节的肢体的移动；浅色的硬质毛发从你的颈部、关节与肢体末端生长出来，它们一定程度上弥补了你如今因为被坚硬的外壳包覆而失去的触觉\n一对额外的眼睛从你原本双眼的上方生长出来，让你在黑暗处也能清晰视物；你的头部与下颌的附属物伸长为两对触肢，进一步增强了你的感官\n你身体两侧的突起生长为一对功能完备的额外手臂，它们的力量较弱，但是足以拿住工具，帮助你的冒险；同时，位于你前腹部与后腹部交界处的突起也成长为一对额外的后肢。但它们还不能支撑你的身体，只是贴附于你的后腹部，微微向上扬起\n你的身体不再渴望固体的食物，转而希望摄取猎物在体外消化后的营养流质。而编织用于这一目的的液化茧囊的方法也已经刻在了你的本能中\n\n与普通的蜘蛛不同的是，你进一步发育的后腹部并不用于容纳器官组织，而是用于存储液态丝线。得益于更加特化的纺丝器，你可以编织更高密度的压缩丝线团，它们甚至足以形成可供攀爬的丝塔"],
+  "codex.form.shape-shifter-curse.spider_2.pros": ["按住主要能力键蓄力并放开，你可以消耗蛛网值发射出蛛丝弹。根据蓄力程度产生不同的效果：\n命中方块的侧面或底面时，向下延伸出可供攀爬的不具粘性的桥梁蛛丝结构\n另外，命中方块的顶面时，可以向上生成塔状桥梁蛛丝结构\n命中生物时，你可以为其施加缓慢与虚弱效果\n\n你拥有一双额外的手臂。通过在Trinkets的额外副手栏中装备不同的特殊装备，你可以获取相应的增益效果\n\n你可以食用线补充蛛网值。通过在背包中手持线并右键点击另一个线，你可以消耗少许蛛网值制造蛛网\n通过在背包中手持蛛网并右键点击堆肥桶，你可以消耗较多蛛网值制造液化茧囊——投入其中的肉类会被逐渐转化为你可以食用的流食囊\n\n你蜕变的蜘蛛身体给与了你免疫中毒以及自由攀爬方块侧壁的能力。额外的一对眼睛可以捕捉细微的光线，让你在黑暗中也能清晰视物\n你不会受到蛛网阻碍。你可以攀爬蛛网，并感知到陷入网中的实体\n蜘蛛不会将你看作敌人"],
+  "codex.form.shape-shifter-curse.spider_2.cons": ["新长出的一对腿部附着在你的后腹部，它们的结构还不适合支撑身体，反而拖慢了你的行动\n虽然依旧可以从肉类中获取少许营养，但是你发现体外消化的流食囊才是更适合你的食物\n节肢杀手附魔的武器会对你造成更多伤害\n你甲壳质的体表与其附着的绒毛惧怕火焰，燃烧造成的伤害更多\n由于新的附肢的阻碍，你只能穿戴头盔与鞋\n村庄的铁傀儡将你视作敌人，它们会主动攻击你"],
+  "codex.form.shape-shifter-curse.spider_2.instincts": ["在你的内心深处传来了某种微弱的悸动：你身上的变化还没有到达终点\n",
+    "出于某种原因，你感受到你的形态受月之潮汐的影响较弱…\n诅咒之月与普通的催化剂无法对你当前的形态产生足够的影响，不过一剂共鸣催化剂应该足以让你的变化抵达下一个阶段…但这一过程很可能是永久性的\n",
+    "你不会真的在考虑这件事情吧？"],
+
+  "codex.form.shape-shifter-curse.spider_3.name": ["クモ形態(永続段階)"],
+  "codex.form.shape-shifter-curse.spider_3.title": ["\n对于洞穴探索者而言，当你看到蓝色蛛网结构的时候，最好就要小心了…当然，除非它的始作俑者是你的同伴\n\n专属饰品/工具：[副手剑],[副手镐],[副手斧],[盾牌(额外手臂槽位)],[不死图腾(额外手臂槽位)],[流食囊(额外手臂槽位)],[箭毒纺锤]"],
+  "codex.form.shape-shifter-curse.spider_3.appearance": ["你的身体已经完全蜕变为适合多足节肢生物的结构。为了支撑多余的重量，你的后足不再悬空，原本作为双腿的肢体也向前倾斜，形成更加稳定的四足姿态——相较于持续移动，它们更适合爆发性地向前推进\n你额外的一对手臂会在不使用时自然收起在躯干前部。你还没有完全适应它们的存在\n另外一对单眼从你的头部侧面生长出来，将你的视野范围扩展到周围的全景。它们让你即使在黑暗处也能够捕捉到四周最细微的骚动\n在颈部覆盖的硬质绒毛下方，你感受到自己的口部也已经变化为了不适合咀嚼的短管状结构。现在你只能从体外消化的流体营养中获取能量\n\n你更加膨大的后腹部中存储着大量的液态丝线。压缩的丝线团可以形成丝茧，高效缠住命中的目标。除此以外，你现在还可以直接从纺丝器喷出液态丝线，让其向你的前方迅速膨胀凝结为坚韧的海绵状“桥梁”\n借助它们，你可以轻松跨越复杂的地势，让你的目标无处可逃"],
+  "codex.form.shape-shifter-curse.spider_3.pros": ["按住主要能力键蓄力并放开，你可以消耗蛛网值发射出蛛丝弹。根据蓄力程度产生不同的效果：\n命中方块的侧面或底面时，向下延伸出可供攀爬的不具粘性的桥梁蛛丝结构\n命中方块的顶面时，可以向上生成塔状桥梁蛛丝结构\n命中生物时，你可以为其施加缓慢、虚弱与“缠身”效果：当“缠身”持续积累时，其最终会变为“茧缚”，让生物完全裹在蛛丝茧中，无法行动\n使用近战攻击“茧缚”的生物，你可以补充一定蛛网值；在“茧缚”效果下死亡的生物可能会掉落流食囊。它们是你现在唯一的食物\n你所制造的蛛丝如今已经变得非常坚实。现在，按住备用能力键蓄力并放开，你可以消耗蛛网值向面向方向生成水平的蛛丝桥梁。其长宽会根据蓄力程度发生变化\n\n你拥有一双额外的手臂。通过在Trinkets的额外副手栏中装备不同的特殊装备，你可以获取相应的增益效果\n你可以食用线补充蛛网值。通过在背包中手持线并右键点击另一个线，你可以消耗少许蛛网值制造蛛网\n通过在背包中手持蛛网并右键点击堆肥桶，你可以消耗较多蛛网值制造液化茧囊——投入其中的肉类会被逐渐转化为你可以食用的流食囊\n你完全变化的多足蜘蛛身体给与了你夜视，免疫中毒以及跨越一格高度的能力，它也给了你自由攀爬方块侧壁的能力\n你不会受到蛛网阻碍。你可以攀爬蛛网，并感知到陷入网中的实体\n蜘蛛不会将你看作敌人"],
+  "codex.form.shape-shifter-curse.spider_3.cons": ["你完全变化的多足蜘蛛身体不再适合需要耐力的持续动作。你的移动与疾跑速度都大幅减慢，并且不再能像之前那样竖直跳跃到一格的高度。但是作为替代，你可以在疾跑时向前跳跃突进\n你的蜘蛛消化系统让你只能从体外消化的流食囊中获取饥饿值。同时，节肢杀手附魔的武器会对你造成更多伤害\n你甲壳质的体表与其附着的绒毛惧怕火焰，燃烧造成的伤害更多\n除了头盔以外，你无法穿戴平常的护甲\n村庄的铁傀儡将你视作敌人，它们会主动攻击你"],
+  "codex.form.shape-shifter-curse.spider_3.instincts": [" "],
+
+  "codex.form.shape-shifter-curse.allay_sp.name": ["アレイ形態(sp)"],
   "codex.form.shape-shifter-curse.allay_sp.title": ["\n你现在的样子相当接近于某种友善的灵体生物，但不清楚是否由于你体内存在的魔法，你的身上出现了一些不太一样的特征",
     "\n\n专属饰品/工具：[共振晶核]"],
   "codex.form.shape-shifter-curse.allay_sp.appearance": ["你的身体现在由某种亮蓝色的半透明薄纱状物质构成。它们非常轻盈，让你能够漂浮在空中\n",
@@ -957,18 +1072,28 @@
     "你的身体更加弱小，使用双手才能挥动工具与武器。你的生命值上限变得更低，挖掘坚硬材质的速度更慢，造成的近战伤害也大量减少\n",
     "由于漂浮在空中，你移动的惯性更大，让你更难停下\n你躯干的下半部分消失了，你不再能装备腿甲与鞋"],
   "codex.form.shape-shifter-curse.allay_sp.instincts": ["\n\n\n与其它形态相比，你觉察到你当前的形态似乎有些“特别之处”：它并没有对你的内心造成太多影响，似乎也没有那么稳定。如果你希望的话，应该可以较为容易地将其逆转"],
+
+  "codex.form.shape-shifter-curse.feral_cat_sp.name": ["ヨツケモネコ形態(sp)"],
   "codex.form.shape-shifter-curse.feral_cat_sp.title": ["喵.."],
   "codex.form.shape-shifter-curse.feral_cat_sp.appearance": ["喵?"],
   "codex.form.shape-shifter-curse.feral_cat_sp.pros": ["喵呜嗷..."],
   "codex.form.shape-shifter-curse.feral_cat_sp.cons": ["喵...喵?"],
   "codex.form.shape-shifter-curse.feral_cat_sp.instincts": ["喵...."],
+
   "tooltip.shape_shifter_curse.morphscale_item": "塑形物品",
   "tooltip.shape_shifter_curse.potion_target_form": "目标形态: ",
   "itemGroup.shape_shifter_curse.sscitems": "幻形者诅咒",
   "category.shape-shifter-curse":"幻形者诅咒",
   "key.shape-shifter-curse.make_sound":"叫声",
+  "key.shape-shifter-curse.toggle_clip_at_ledge": "切换潜行边缘掉落",
+  "message.shape-shifter-curse.clip_at_ledge.on": "潜行边缘掉落: 开启",
+  "message.shape-shifter-curse.clip_at_ledge.off": "潜行边缘掉落: 关闭",
+  "message.shape-shifter-curse.select_form_ui.target_name": "目标: %s",
+  "message.shape-shifter-curse.select_form_ui.target_uuid": "[ %s ]",
   "item.shape-shifter-curse.custom_trinket": ["自定义饰品"],
-  
+  "trinket.slot.hand.extra_hand": "额外手",
+  "curios.identifier.extra_hand": "额外手",
+
   "text.shape-shifter-curse.config.title": "幻形者诅咒 配置界面",
   "text.shape-shifter-curse.config.close": "取消",
   "text.autoconfig.shape-shifter-curse-client.title": "幻形者诅咒 - 客户端配置",
@@ -977,13 +1102,19 @@
   "text.autoconfig.shape-shifter-curse-client.option.ignoreNoRenderArmPower": "忽略不渲染手臂的能力",
   "text.autoconfig.shape-shifter-curse-client.category.InDevelopment": "开发中配置",
   "text.autoconfig.shape-shifter-curse-client.option.newStartBookForBiggerScreen": "更大的新版幻形者之书界面",
+  "text.autoconfig.shape-shifter-curse-client.option.enableChangeFPMConfig": "启用自动修改FPM配置",
+  "text.autoconfig.shape-shifter-curse-client.category.Integration": "兼容",
+  "text.autoconfig.shape-shifter-curse-client.option.enableBetterCombatFix": "启用BetterCombat修复",
   "text.autoconfig.shape-shifter-curse-client.category.UI": "UI",
   "text.autoconfig.shape-shifter-curse-client.option.instinctBarPosType": "本能条中心位置类型",
   "text.autoconfig.shape-shifter-curse-client.option.instinctBarPosOffsetX": "本能条偏移量 X",
   "text.autoconfig.shape-shifter-curse-client.option.instinctBarPosOffsetY": "本能条偏移量 Y",
-  "text.autoconfig.shape-shifter-curse-client.option.familiarFoxManaBarPosType": "使魔赤狐魔力条中心位置类型",
-  "text.autoconfig.shape-shifter-curse-client.option.familiarFoxManaBarPosOffsetX": "使魔赤狐魔力条偏移量 X",
-  "text.autoconfig.shape-shifter-curse-client.option.familiarFoxManaBarPosOffsetY": "使魔赤狐魔力条偏移量 Y",
+  "text.autoconfig.shape-shifter-curse-client.option.manaBarPosType": "魔力条中心位置类型",
+  "text.autoconfig.shape-shifter-curse-client.option.manaBarPosOffsetX": "魔力条偏移量 X",
+  "text.autoconfig.shape-shifter-curse-client.option.manaBarPosOffsetY": "魔力条偏移量 Y",
+  "text.autoconfig.shape-shifter-curse-client.option.itemStorePowerPosType": "额外物品栏Power 中心位置类型",
+  "text.autoconfig.shape-shifter-curse-client.option.itemStorePowerPosOffsetX": "额外物品栏Power 偏移量 X",
+  "text.autoconfig.shape-shifter-curse-client.option.itemStorePowerPosOffsetY": "额外物品栏Power 偏移量 Y",
   "text.autoconfig.shape-shifter-curse-common.title": "幻形者诅咒 - 通用配置",
   "text.autoconfig.shape-shifter-curse-common.category.General": "常规配置",
   "text.autoconfig.shape-shifter-curse-common.option.transformativeBatSpawnChance": "咒文蝙蝠刷新成功率",
@@ -993,7 +1124,15 @@
   "text.autoconfig.shape-shifter-curse-common.option.enableNewStartBook": "启用新版幻形者之书界面",
   "text.autoconfig.shape-shifter-curse-common.option.curseMoonPhase": "诅咒之月月相",
   "text.autoconfig.shape-shifter-curse-common.option.allowSleepInCursedMoon": "是否可以在诅咒之月中睡觉",
+  "text.autoconfig.shape-shifter-curse-common.option.enableDebugCommand": "启用无权限限制的调试命令(不要在服务器中打开)",
   "text.autoconfig.shape-shifter-curse-common.category.InDevelopment": "开发中配置",
+  "text.autoconfig.shape-shifter-curse-common.category.Patron": "赞助者配置 (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.enablePatronFormSystem": "启用赞助者形态功能 (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.DataPackVersionUrl": "数据包版本URL (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.DataPackUrl": "数据包下载URL (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.ResourcePackVersionUrl": "资源包版本URL (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.ResourcePackUrl": "资源包下载URL (未完工)",
+  "text.autoconfig.shape-shifter-curse-common.option.CheckUpdateInterval": "检查更新间隔(秒) (未完工)",
   "text.autoconfig.shape-shifter-curse-custom.title": "幻形者诅咒 - 玩家自定义配置",
   "text.autoconfig.shape-shifter-curse-custom.option.keep_original_skin": "保留原版皮肤",
   "text.autoconfig.shape-shifter-curse-custom.option.enable_form_color": "启用Form自定义颜色系统",
