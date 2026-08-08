@@ -14,12 +14,13 @@ import java.util.Collection;
 
 public class AdditionalItemCondition {
     public static void register() {
-        register(IsMorphScaleItemCondition.getFactory());
+        register(IsMorphScaleItemCondition.getFactory1());
+        register(IsMorphScaleItemCondition.getFactory2());
         register(new ConditionFactory<ItemStack>(
                 ShapeShifterCurseFabric.identifier("is_weapon"),
                 new SerializableData(),
                 (data, itemstack) -> {
-                    Collection<EntityAttributeModifier> modifiers = itemstack.getItem().getAttributeModifiers(itemstack, EquipmentSlot.MAINHAND).get(EntityAttributes.GENERIC_ATTACK_DAMAGE);
+                    Collection<EntityAttributeModifier> modifiers = itemstack.getItem().getAttributeModifiers(EquipmentSlot.MAINHAND).get(EntityAttributes.GENERIC_ATTACK_DAMAGE);
                     double totalAdd = 0;
                     for (EntityAttributeModifier modifier : modifiers) {
                         if (modifier.getOperation() == EntityAttributeModifier.Operation.ADDITION) {
@@ -29,6 +30,7 @@ public class AdditionalItemCondition {
                     return totalAdd > 1;
                 }
         ));
+        FoodUtilsCondition.registerCondition(AdditionalItemCondition::register);
     }
 
     private static void register(ConditionFactory<ItemStack> conditionFactory) {

@@ -7,7 +7,6 @@
   "mixins": [
     "BreathingUnderWaterMixin",
     "CancelEntityStepSoundMixin",
-    "CursedMoonWorldMixin",
     "CustomEdibleItemMixin",
     "CustomEdiblePlayerAMixin",
     "CustomEdiblePlayerBMixin",
@@ -29,11 +28,13 @@
     "SneakEdgeCheckMixin",
     "StatusEffectMixin",
     "ThrowablePotionStackMixin",
-    "accessor.ActiveTargetGoalAccessor",
     "block.PowderSnowBlockMixin",
     "block.SweetBerryBushBlockMixin",
     "integration.AppleSkin",
-    "integration.AzureLib_AzProvider",
+    "integration.ToughAsNailsDrinkInWorldPacketMixin",
+    "integration.ToughAsNailsTemperatureHelperImplMixin",
+    "integration.ToughAsNailsThirstHandlerMixin",
+    "integration.ToughAsNailsThirstHooksMixin",
     "mob.FoxEntityMixin",
     "mob.MobEntityTeamMixin",
     "mob.VillagerHostilesSensorMixin",
@@ -64,7 +65,14 @@
     "EntityMixin",
     "DefaultAttributeRegistryMixin",
     "mob.SpiderEntityMixin",
-    "mob.IronGolemEntityMixin"
+    "mob.IronGolemEntityMixin",
+    "SwordItemMixin",
+    "ShearsItemMixin",
+    "SmithingScreenHandlerMixin",
+    "AdvancementFixMixin",
+    "mob.ScareCreeperMixin",
+    "mob.CatEntityMixin",
+    "mob.OcelotEntityMixin"
   ],
   "client": [
     "AdjustItemHoldFeatureRendererMixin",
@@ -80,10 +88,10 @@
     "InGameHudMixin",
     "InventoryScreenMixin",
     "KeyboardInputMixin",
+    "LongNeckArmorFeatureRendererMixin",
+    "LongNeckHeadFeatureRendererMixin",
     "MinecraftClientMixin",
     "MoonPhaseRenderMixin",
-    "OverrideSkinFirstPersonMixin",
-    "OverrideSkinThirdPersonMixin",
     "PlayerEntityAnimOverrideMixin",
     "PlayerEntityRendererFallFlyingMixin",
     "PlayerEntitySpeedFOVMixin",
@@ -95,7 +103,10 @@
     "integration.TacZ_AnimThird",
     "PlayerClipAtLedgeMixin",
     "CameraBobbingMixin",
-    "EntityRendererMixin"
+    "EntityRendererMixin",
+    "render.LivingEntityRendererMixin",
+    "render.PlayerEntityRendererMixin",
+    "render.AbstractClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

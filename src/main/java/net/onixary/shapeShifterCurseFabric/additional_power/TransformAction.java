@@ -4,17 +4,14 @@ import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
 import net.onixary.shapeShifterCurseFabric.ShapeShifterCurseFabric;
-import net.onixary.shapeShifterCurseFabric.items.RegCustomPotions;
-import net.onixary.shapeShifterCurseFabric.player_form.PlayerFormBase;
+import net.onixary.shapeShifterCurseFabric.player_form.IForm;
 import net.onixary.shapeShifterCurseFabric.player_form.RegPlayerForms;
-import net.onixary.shapeShifterCurseFabric.player_form.transform.TransformManager;
+import net.onixary.shapeShifterCurseFabric.player_form.utils.TransformManager;
 import net.onixary.shapeShifterCurseFabric.status_effects.CTPUtils;
-import net.onixary.shapeShifterCurseFabric.status_effects.RegTStatusEffect;
 import net.onixary.shapeShifterCurseFabric.status_effects.RegTStatusPotionEffect;
 
 import java.util.function.Consumer;
@@ -24,6 +21,7 @@ public class TransformAction {
         if (entity instanceof PlayerEntity pe) {
             Identifier formId = data.get("form_id");
             boolean instant = data.get("instant");
+            boolean force = data.get("force");
             if (formId == null) {
                 ShapeShifterCurseFabric.LOGGER.warn("Missing form_id for TransformAction");
                 return;
@@ -32,12 +30,15 @@ public class TransformAction {
                 ShapeShifterCurseFabric.LOGGER.warn("Invalid form_id for TransformAction: {}", formId);
                 return;
             }
-            PlayerFormBase pfb = RegPlayerForms.getPlayerForm(formId);
-            if (instant) {
-                TransformManager.setFormDirectly(pe, pfb);
-            }
-            else {
-                TransformManager.handleDirectTransform(pe, pfb, false);
+            IForm pfb = RegPlayerForms.getPlayerForm(formId);
+            if (force) {
+                TransformManager.forceTransform(pe, pfb, instant);
+            } else {
+                if (instant) {
+                    TransformManager.immediatelyTransform(pe, pfb);
+                } else {
+                    TransformManager.startTransform(pe, pfb, null);
+                }
             }
         }
     }
@@ -57,7 +58,8 @@ public class TransformAction {
                 ShapeShifterCurseFabric.identifier("transform_to_form"),
                 new SerializableData()
                         .add("form_id", SerializableDataTypes.IDENTIFIER, null)
-                        .add("instant", SerializableDataTypes.BOOLEAN, false),
+                        .add("instant", SerializableDataTypes.BOOLEAN, false)
+                        .add("force", SerializableDataTypes.BOOLEAN, true),
                 TransformAction::TransformToFormAction
         ));
         ActionRegister.accept(new ActionFactory<>(

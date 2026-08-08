@@ -32,12 +32,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.onixary.shapeShifterCurseFabric.additional_power.*;
 import net.onixary.shapeShifterCurseFabric.advancement.*;
-import net.onixary.shapeShifterCurseFabric.command.CustomFormArgumentType;
 import net.onixary.shapeShifterCurseFabric.command.FormArgumentType;
+import net.onixary.shapeShifterCurseFabric.command.MiscArgumentType;
 import net.onixary.shapeShifterCurseFabric.command.ShapeShifterCurseCommand;
 import net.onixary.shapeShifterCurseFabric.config.ClientConfig;
 import net.onixary.shapeShifterCurseFabric.config.CommonConfig;
 import net.onixary.shapeShifterCurseFabric.config.PlayerCustomConfig;
+import net.onixary.shapeShifterCurseFabric.cursed_moon.CursedMoon;
 import net.onixary.shapeShifterCurseFabric.entity.RegCustomEntity;
 import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.RegTransformativeEntity;
 import net.onixary.shapeShifterCurseFabric.form_giving_custom_entity.RegTransformativeEntitySpawnEgg;
@@ -58,10 +59,10 @@ import net.onixary.shapeShifterCurseFabric.networking.ModPacketsS2CServer;
 import net.onixary.shapeShifterCurseFabric.player_animation.form_animation.AnimationTransform;
 import net.onixary.shapeShifterCurseFabric.player_form.FormDataPackReloadListener;
 import net.onixary.shapeShifterCurseFabric.player_form.RegPlayerForms;
-import net.onixary.shapeShifterCurseFabric.player_form.ability.FormAbilityManager;
-import net.onixary.shapeShifterCurseFabric.player_form.ability.RegPlayerFormComponent;
-import net.onixary.shapeShifterCurseFabric.player_form.instinct.InstinctTicker;
-import net.onixary.shapeShifterCurseFabric.player_form.transform.TransformManager;
+import net.onixary.shapeShifterCurseFabric.player_form.utils.FormUtils;
+import net.onixary.shapeShifterCurseFabric.player_form.utils.InstinctUtils;
+import net.onixary.shapeShifterCurseFabric.player_form.utils.PlayerFormComponent;
+import net.onixary.shapeShifterCurseFabric.player_form.utils.TransformManager;
 import net.onixary.shapeShifterCurseFabric.recipes.BrewingRecipeReloadListener;
 import net.onixary.shapeShifterCurseFabric.recipes.RecipeSerializerRegister;
 import net.onixary.shapeShifterCurseFabric.screen_effect.TransformOverlay;
@@ -69,13 +70,10 @@ import net.onixary.shapeShifterCurseFabric.status_effects.RegOtherStatusEffects;
 import net.onixary.shapeShifterCurseFabric.status_effects.RegTStatusEffect;
 import net.onixary.shapeShifterCurseFabric.status_effects.RegTStatusPotionEffect;
 import net.onixary.shapeShifterCurseFabric.status_effects.attachment.EffectManager;
+import net.onixary.shapeShifterCurseFabric.util.*;
 import net.onixary.shapeShifterCurseFabric.util.Accessory.AccessoryUtils;
 import net.onixary.shapeShifterCurseFabric.util.Accessory.DefaultAccessory;
-import net.onixary.shapeShifterCurseFabric.util.PatronUtils;
-import net.onixary.shapeShifterCurseFabric.util.AttackEntityDataTracker;
-import net.onixary.shapeShifterCurseFabric.util.PlayerEventHandler;
-import net.onixary.shapeShifterCurseFabric.util.TickManager;
-import net.onixary.shapeShifterCurseFabric.util.TrinketDataPackReloadListener;
+import net.onixary.shapeShifterCurseFabric.util.Verify.AuthServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -90,6 +88,8 @@ import java.util.List;
 public class ShapeShifterCurseFabric implements ModInitializer {
 
     public static final String MOD_ID = "shape-shifter-curse";
+    public static final Boolean IS_CONNECTOR_VERSION = false;  // 互联版本为true 用于区分版本
+
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static final Path MOD_LOCAL_DATA_STORAGE = Path.of("ssc_data");
@@ -111,9 +111,6 @@ public class ShapeShifterCurseFabric implements ModInitializer {
     public static final OnEndCursedMoonCuredForm2 ON_END_CURSED_MOON_CURED_FORM_2 = Criteria.register(new OnEndCursedMoonCuredForm2());
     public static final OnGetTransformEffect ON_GET_TRANSFORM_EFFECT = Criteria.register(new OnGetTransformEffect());
     public static final OnSleepWhenHaveTransformEffect ON_SLEEP_WHEN_HAVE_TRANSFORM_EFFECT = Criteria.register(new OnSleepWhenHaveTransformEffect());
-    public static final OnTransform0 ON_TRANSFORM_0 = Criteria.register(new OnTransform0());
-    public static final OnTransform1 ON_TRANSFORM_1 = Criteria.register(new OnTransform1());
-    public static final OnTransform2 ON_TRANSFORM_2 = Criteria.register(new OnTransform2());
     public static final OnTransformByCatalyst ON_TRANSFORM_BY_CATALYST = Criteria.register(new OnTransformByCatalyst());
     public static final OnTransformByCure ON_TRANSFORM_BY_CURE = Criteria.register(new OnTransformByCure());
     public static final OnUseGoldenApple ON_USE_GOLDEN_APPLE = Criteria.register(new OnUseGoldenApple());
@@ -122,7 +119,9 @@ public class ShapeShifterCurseFabric implements ModInitializer {
     public static final OnTriggerCursedMoon ON_TRIGGER_CURSED_MOON = Criteria.register(new OnTriggerCursedMoon());
     public static final OnTriggerCursedMoonForm2 ON_TRIGGER_CURSED_MOON_FORM_2 = Criteria.register(new OnTriggerCursedMoonForm2());
     public static final OnFirstJoinWithMod ON_FIRST_JOIN_WITH_MOD = Criteria.register(new OnFirstJoinWithMod());
-    public static final OnEndCursedMoonBuggedForm2 ON_END_CURSED_MOON_BUGGED_FORM_2 = Criteria.register(new OnEndCursedMoonBuggedForm2());
+
+    public static final OnTransformForm ON_TRANSFORM_FORM = Criteria.register(new OnTransformForm());
+    public static final OnWebEntity ON_WEB_ENTITY = Criteria.register(new OnWebEntity());
 
     // Reg custom entities
     // Bat
@@ -215,6 +214,7 @@ public class ShapeShifterCurseFabric implements ModInitializer {
         MinionRegister.register();
 
         AttackEntityDataTracker.init();
+        ModGameRules.register();
 
         // 注册配置文件
         AutoConfig.register(PlayerCustomConfig.class, Toml4jConfigSerializer::new);  // 客户端配置
@@ -240,14 +240,15 @@ public class ShapeShifterCurseFabric implements ModInitializer {
 
         ManaRegistries.register();
         DefaultAccessory.init();
+        AuthServer.init();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             // 获取主世界作为默认世界
             ServerWorld overworld = server.getOverworld();
-            FormAbilityManager.getServerWorld(overworld);
             // 更新Patron状态
             PatronUtils.OnServerLoad(server);
             TransformManager.onServerInit();
+            InstinctUtils.onServerInit();
             AccessoryUtils.onStartServer();
         });
         // 获取动态Form(DataPack)
@@ -256,8 +257,9 @@ public class ShapeShifterCurseFabric implements ModInitializer {
         ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new BrewingRecipeReloadListener());
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resourceManager, success) -> server.getPlayerManager().getPlayerList().forEach((player) -> {
             ModPacketsS2CServer.updateDynamicForm(player);
-            if (!player.getComponent(RegPlayerFormComponent.PLAYER_FORM).isCurrentFormExist()) {
-                FormAbilityManager.applyForm(player, RegPlayerForms.ORIGINAL_BEFORE_ENABLE);
+            PlayerFormComponent component = PlayerFormComponent.COMPONENT.get(player);
+            if (RegPlayerForms.getPlayerForm(component.nowFormID) == null) {
+                FormUtils._loadForm(player, component.getFallbackForm());
             }
         }));
         initLocalDataStorage();
@@ -270,12 +272,12 @@ public class ShapeShifterCurseFabric implements ModInitializer {
         ArgumentTypeRegistry.registerArgumentType(
                 Identifier.of(MOD_ID, "form_argument_type"),
                 FormArgumentType.class,
-                ConstantArgumentSerializer.of(FormArgumentType::new)
+                new FormArgumentType.Form_ArgumentType_Serializer()
         );
         ArgumentTypeRegistry.registerArgumentType(
-                Identifier.of(MOD_ID, "custom_form_argument_type"),
-                CustomFormArgumentType.class,
-                ConstantArgumentSerializer.of(CustomFormArgumentType::new)
+                Identifier.of(MOD_ID, "string_enum_argument_type"),
+                MiscArgumentType.Enum_ArgumentType.class,
+                new MiscArgumentType.Enum_ArgumentType_Serializer()
         );
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
             PlayerEntity player = handler.player;
@@ -382,11 +384,12 @@ public class ShapeShifterCurseFabric implements ModInitializer {
         List<ServerPlayerEntity> players = minecraftServer.getPlayerManager().getPlayerList();
         if (players.isEmpty()) return;
 
+        TransformManager.serverTick(minecraftServer);
+        CursedMoon.serverTick(minecraftServer);
+        InstinctUtils.serverTick(minecraftServer);
+
         for(ServerPlayerEntity player : players) {
             // handle instinct tick
-            InstinctTicker.tick(player);
-            // handle transform manager update
-            TransformManager.update(player);
             TickManager.tickServerAll();
 
             // CustomEdiblePower Tick

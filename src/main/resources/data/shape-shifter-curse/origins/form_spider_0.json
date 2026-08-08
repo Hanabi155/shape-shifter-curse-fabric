@@ -1,6 +1,5 @@
 {
   "powers": [
-    "shape-shifter-curse:form_spider_0_scale",
     "shape-shifter-curse:form_spider_0_web_projectile",
     "shape-shifter-curse:form_spider_web_no_slow",
     "shape-shifter-curse:form_spider_climb_web",
@@ -14,7 +13,11 @@
     "shape-shifter-curse:form_spider_0_dew_covered_cobweb_instinct",
     "shape-shifter-curse:form_spider_0_dew_covered_cobweb_particle",
     "shape-shifter-curse:form_spider_0_instinct_max_particle",
-    "shape-shifter-curse:form_instinct_use_golden_apple"
+    "shape-shifter-curse:form_instinct_use_golden_apple",
+
+    "shape-shifter-curse:form_spider_sound",
+    "shape-shifter-curse:form_spider_sound_hurt",
+    "shape-shifter-curse:form_spider_sound_key"
   ],
   "icon": {
     "item": "minecraft:player_head"

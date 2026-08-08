@@ -3,18 +3,24 @@ package net.onixary.shapeShifterCurseFabric.player_form.forms;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
 import net.onixary.shapeShifterCurseFabric.ShapeShifterCurseFabric;
-import net.onixary.shapeShifterCurseFabric.player_animation.v3.*;
+import net.onixary.shapeShifterCurseFabric.player_animation.v3.AbstractAnimStateController;
 import net.onixary.shapeShifterCurseFabric.player_animation.v3.AnimStateControllerDP.*;
-import net.onixary.shapeShifterCurseFabric.player_form.PlayerFormBase;
+import net.onixary.shapeShifterCurseFabric.player_animation.v3.AnimStateEnum;
+import net.onixary.shapeShifterCurseFabric.player_animation.v3.AnimSystem;
+import net.onixary.shapeShifterCurseFabric.player_animation.v3.AnimUtils;
+import net.onixary.shapeShifterCurseFabric.player_form.NormalForm;
 import net.onixary.shapeShifterCurseFabric.player_form.PlayerFormBodyType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 // 通用四足形态
-public class Form_FeralBase extends PlayerFormBase {
+public class Form_FeralBase extends NormalForm {
+    // 用模版的需要自行修改canSneakRush 不用模版的直接改AnimStateController
+    public boolean canSneakRush = false;
+
     public Form_FeralBase(Identifier formID) {
         super(formID);
-        this.setBodyType(PlayerFormBodyType.FERAL);
+        this.bodyType(PlayerFormBodyType.FERAL);
     }
 
     // 共用动画 其他类尽量使用private
@@ -28,6 +34,7 @@ public class Form_FeralBase extends PlayerFormBase {
     public static final AnimUtils.AnimationHolderData ANIM_DIG = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_dig"));
     public static final AnimUtils.AnimationHolderData ANIM_JUMP = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_jump"));
     public static final AnimUtils.AnimationHolderData ANIM_CLIMB = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_climb"));
+    public static final AnimUtils.AnimationHolderData ANIM_CLIMB_IDLE = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_climb_idle"));
     public static final AnimUtils.AnimationHolderData ANIM_FALL = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_fall"));
     public static final AnimUtils.AnimationHolderData ANIM_ATTACK = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_attack"));
     public static final AnimUtils.AnimationHolderData ANIM_SLEEP = new AnimUtils.AnimationHolderData(ShapeShifterCurseFabric.identifier("form_feral_common_sleep"));
@@ -51,7 +58,7 @@ public class Form_FeralBase extends PlayerFormBase {
     public static final AbstractAnimStateController ATTACK_CONTROLLER = new OneAnimController(ANIM_ATTACK);
     public static final AbstractAnimStateController SLEEP_CONTROLLER = new OneAnimController(ANIM_SLEEP);
     public static final AbstractAnimStateController FALL_FLYING_CONTROLLER = new OneAnimController(ANIM_ELYTRA_FLY);
-    public static final AbstractAnimStateController CLIMB_CONTROLLER = new OneAnimController(ANIM_CLIMB);
+    public static final AbstractAnimStateController CLIMB_CONTROLLER = new ClimbAnimController(ANIM_CLIMB_IDLE, ANIM_CLIMB);
     public static final AbstractAnimStateController JUMP_CONTROLLER = new OneAnimController(ANIM_JUMP);
     public static final AbstractAnimStateController FALL_CONTROLLER = new OneAnimController(ANIM_FALL);
     // UseItemAnimControllerPro的参数确实是ANIM_IDLE, ANIM_IDLE, ANIM_SNEAK_IDLE, ANIM_SNEAK_WALK 由于ANIM_SNEAK_IDLE为坐下动画 所以SNEAK动画需要区分 如果有单独的动画可以使用WithSneakAnimController
@@ -77,14 +84,14 @@ public class Form_FeralBase extends PlayerFormBase {
                 case ANIM_STATE_USE_ITEM:
                     return USE_ITEM_CONTROLLER;
                 case ANIM_STATE_WALK:
-                    if (this.getCanSneakRush()) {
+                    if (this.canSneakRush) {
                         return WALK_CONTROLLER_SNEAK_RUSH;
                     }
                     else {
                         return WALK_CONTROLLER;
                     }
                 case ANIM_STATE_SPRINT:
-                    if (this.getCanSneakRush()) {
+                    if (this.canSneakRush) {
                         return SPRINT_CONTROLLER_SNEAK_RUSH;
                     }
                     else {
